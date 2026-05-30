@@ -145,30 +145,30 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       const defaultFileName = fileName?.dataset.default || 'Ningún archivo seleccionado';
 
       const validators = {
-        nombre: (input) => (input.value.trim() ? '' : 'El nombre es obligatorio.'),
-        apellido: (input) => (input.value.trim() ? '' : 'El apellido es obligatorio.'),
-        email: (input) => {
+        nombre: (input: { value: string; }) => (input.value.trim() ? '' : 'El nombre es obligatorio.'),
+        apellido: (input: { value: string; }) => (input.value.trim() ? '' : 'El apellido es obligatorio.'),
+        email: (input: { value: string; }) => {
           const value = input.value.trim();
           if (!value) return 'El email es obligatorio.';
           return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) ? '' : 'Introduce un email válido.';
         },
-        telefono: (input) => {
+        telefono: (input: { value: string; }) => {
           const value = input.value.trim();
           if (!value) return 'El teléfono es obligatorio.';
           const digits = value.replace(/\D/g, '');
           return digits.length >= 9 ? '' : 'Introduce un teléfono válido (mínimo 9 dígitos).';
         },
-        mensaje: (input) => (input.value.trim() ? '' : 'El mensaje es obligatorio.'),
-        cv: (input) => {
+        mensaje: (input: { value: string; }) => (input.value.trim() ? '' : 'El mensaje es obligatorio.'),
+        cv: (input: { files: any[]; }) => {
           const file = input.files && input.files[0];
           if (!file) return 'Adjunta tu CV en PDF.';
           const isPdf = file.type === 'application/pdf' || file.name.toLowerCase().endsWith('.pdf');
           return isPdf ? '' : 'Solo se permiten archivos PDF.';
         },
-        privacy: (input) => (input.checked ? '' : 'Debes aceptar la política de privacidad.')
+        privacy: (input: { checked: any; }) => (input.checked ? '' : 'Debes aceptar la política de privacidad.')
       };
 
-      const setError = (input, message) => {
+      const setError = (input: Element, message: string | null) => {
         const error = form.querySelector(`[data-error-for="${input.id}"]`);
         if (!error) return;
         if (message) {
@@ -182,7 +182,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         }
       };
 
-      const validateField = (input) => {
+      const validateField = (input: Element) => {
         const validator = validators[input.id];
         if (!validator) return true;
         const message = validator(input);

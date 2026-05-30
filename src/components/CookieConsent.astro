@@ -75,7 +75,7 @@
     const analyticsToggle = document.getElementById('cookie-analytics');
     const preferencesToggle = document.getElementById('cookie-preferences');
     let isOpen = false;
-    let lastFocused = null;
+    let lastFocused: Element | null = null;
 
     const parseStoredConsent = () => {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -89,7 +89,7 @@
       }
     };
 
-    const isConsentExpired = (stored) => {
+    const isConsentExpired = (stored: { date: string | number | Date; }) => {
       if (!stored?.date) return false;
       const storedDate = new Date(stored.date);
       if (Number.isNaN(storedDate.getTime())) return false;
@@ -97,12 +97,12 @@
       return ageMs > EXPIRY_DAYS * 24 * 60 * 60 * 1000;
     };
 
-    const applyStoredPreferences = (stored) => {
+    const applyStoredPreferences = (stored: { analytics: any; preferences: any; }) => {
       if (analyticsToggle) analyticsToggle.checked = Boolean(stored?.analytics);
       if (preferencesToggle) preferencesToggle.checked = Boolean(stored?.preferences);
     };
 
-    const setPreferencesOpen = (open) => {
+    const setPreferencesOpen = (open: boolean) => {
       if (!preferencesPanel) return;
       preferencesPanel.hidden = !open;
       configureButton?.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -131,7 +131,7 @@
       }
     };
 
-    const saveConsent = (analytics, preferences) => {
+    const saveConsent = (analytics: boolean, preferences: boolean) => {
       const payload = {
         analytics,
         preferences,
