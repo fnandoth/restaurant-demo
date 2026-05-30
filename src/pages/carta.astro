@@ -17,24 +17,34 @@ const slugify = (value: string) =>
 
 const imageMap = [
   {
-    match: 'Nigiris variados',
-    src: '/assets/restaurante-comida-nigiris.jpg',
-    alt: 'Nigiris variados de la carta de Gran Café Santander'
+    match: 'Anchoas con brioche',
+    src: '/assets/restaurante-comida-anchoas-con-brioche.jpg',
+    alt: 'Anchoas con brioche y mantequilla'
   },
   {
-    match: 'Ensalada de tomates cherrys',
+    match: 'La Maruca',
+    src: '/assets/restaurante-comida-la-maruca.jpg',
+    alt: 'Ensaladilla rusa La Maruca'
+  },
+  {
+    match: 'Ensalada de jamón',
+    src: '/assets/restaurante-comida-jamon-con-virutas.jpg',
+    alt: 'Ensalada de jamón con virutas de foie'
+  },
+  {
+    match: 'Ensalada de tomates',
     src: '/assets/restaurante-comida-Ensalada-de-tomates-cherry-con-queso-Jaradilla.jpg',
     alt: 'Ensalada de tomates cherry con queso Jaradilla'
   },
   {
-    match: 'Empanadillas de bonito',
-    src: '/assets/restaurante-comida-Empanadillas.jpg',
-    alt: 'Empanadillas de bonito como las de Angélica'
+    match: 'Ensalada verde',
+    src: '/assets/restaurante-comida-ensalada-verde.jpg',
+    alt: 'Ensalada verde saludable'
   },
   {
-    match: 'Macarrones sin gluten',
-    src: '/assets/restaurante-comida-Macarrones-sin-gluten.jpg',
-    alt: 'Macarrones sin gluten de bonito del norte con tomate'
+    match: 'Nigiris variados',
+    src: '/assets/restaurante-comida-nigiris.jpg',
+    alt: 'Nigiris variados de la carta de Gran Café Santander'
   },
   {
     match: 'Pastel de queso y trufa',
@@ -42,19 +52,229 @@ const imageMap = [
     alt: 'Pastel de queso y trufa de Gran Café Santander'
   },
   {
+    match: 'Puding de mejillones',
+    src: '/assets/restaurante-comida-pudin-de-mejillones.jpg',
+    alt: 'Pudin de mejillones en escabeche'
+  },
+  {
+    match: 'Tartar de aguacate',
+    src: '/assets/restaurante-comida-tartar-salmon.jpg',
+    alt: 'Tartar de aguacate y salmón ahumado'
+  },
+  {
+    match: 'Tartar de bonito',
+    src: '/assets/restaurante-comida-tartar-de-bonito.jpg',
+    alt: 'Tartar de bonito de la carta'
+  },
+  {
+    match: 'Carpaccio de lomo',
+    src: '/assets/restaurante-comida-carpaccio.jpg',
+    alt: 'Carpaccio de lomo de vaca con patatas y pimientos'
+  },
+  {
+    match: 'Croquetas de lacón',
+    src: '/assets/restaurante-comida-croquetas.jpg',
+    alt: 'Croquetas de lacón y huevo cocido'
+  },
+  {
+    match: 'Patatas bravas',
+    src: '/assets/restaurante-comida-patatas.jpg',
+    alt: 'Patatas bravas'
+  },
+  {
+    match: 'Empanadillas de bonito',
+    src: '/assets/restaurante-comida-Empanadillas.jpg',
+    alt: 'Empanadillas de bonito como las de Angélica'
+  },
+  {
+    match: 'Rabas de calamar',
+    src: '/assets/restaurante-comida-Rabas-de-calamar.jpg',
+    alt: 'Rabas de calamar al estilo Santander'
+  },
+  {
+    match: 'Buñuelos de bacalao',
+    src: '/assets/restaurante-comida-Buñuelos.jpg',
+    alt: 'Buñuelos de bacalao de la Maruca'
+  },
+  {
+    match: 'Trozucos',
+    src: '/assets/restaurante-comida-Trozucos.jpg',
+    alt: 'Trozucos de merluza orly'
+  },
+  {
+    match: 'Mejillones en salsa roja',
+    src: '/assets/restaurante-comida-Mejillones-roja.jpg',
+    alt: 'Mejillones en salsa roja con toque picante'
+  },
+  {
+    match: 'Landa',
+    src: '/assets/restaurante-comida-landa.jpg',
+    alt: 'Parada en Landa con huevos y morcilla'
+  },
+  {
+    match: 'Menestras de verduras',
+    src: '/assets/restaurante-comida-Menestras-de-verduras-salteadas.jpg',
+    alt: 'Menestras de verduras salteadas'
+  },
+  {
+    match: 'Alcachofas en salsa verde',
+    src: '/assets/restaurante-comida-Alcachofas-verde.jpg',
+    alt: 'Alcachofas en salsa verde con cocochas'
+  },
+  {
+    match: 'Pencas',
+    src: '/assets/restaurante-comida-Pencas.jpg',
+    alt: 'Pencas a la importancia con mejillones y langostinos'
+  },
+  {
+    match: 'Lasaña boloñesa',
+    src: '/assets/restaurante-comida-Lasaña.jpg',
+    alt: 'Lasaña boloñesa con crujiente de parmesano'
+  },
+  {
+    match: 'Linguine a la marinera',
+    src: '/assets/restaurante-comida-Linguine.jpg',
+    alt: 'Linguine a la marinera'
+  },
+  {
+    match: 'Macarrones sin gluten',
+    src: '/assets/restaurante-comida-Macarrones-sin-gluten.jpg',
+    alt: 'Macarrones sin gluten de bonito del norte con tomate'
+  },
+  {
+    match: 'Puntalete',
+    src: '/assets/restaurante-comida-Puntalete.jpg',
+    alt: 'Puntalete tratado como un rissoto'
+  },
+  {
+    match: 'Arroz negro',
+    src: '/assets/restaurante-comida-Arroz-negro.jpg',
+    alt: 'Arroz negro con cachón'
+  },
+  {
+    match: 'Arroz con verduras y setas',
+    src: '/assets/restaurante-comida-Arroz-setas.jpg',
+    alt: 'Arroz con verduras y setas'
+  },
+  {
+    match: 'Rula',
+    src: '/assets/restaurante-comida-Rula-merluza.jpg',
+    alt: 'Merluza de Rula rebozada con ajillo y langostinos'
+  },
+  {
+    match: 'Merluza de anzuelo',
+    src: '/assets/restaurante-comida-Merluza.jpg',
+    alt: 'Merluza de anzuelo a la plancha con patatas panadera'
+  },
+  {
+    match: 'Merluza a la romana',
+    src: '/assets/restaurante-comida-Merluza-romana.jpg',
+    alt: 'Merluza a la romana con pimientos verdes'
+  },
+  {
+    match: 'Chipirones',
+    src: '/assets/restaurante-comida-Chipirones.jpg',
+    alt: 'Chipirones encebollados'
+  },
+  {
+    match: 'Hamburguesa de bonito',
+    src: '/assets/restaurante-comida-bonito-ham.jpg',
+    alt: 'Hamburguesa de bonito'
+  },
+  {
+    match: 'Hamburguesa de ternera',
+    src: '/assets/restaurante-comida-Hamburguesa-ternera.jpg',
+    alt: 'Hamburguesa de ternera'
+  },
+  {
+    match: 'Filetes rusos',
+    src: '/assets/restaurante-comida-filete-ruso.jpg',
+    alt: 'Filetes rusos con foie'
+  },
+  {
+    match: 'Cordero deshuesado',
+    src: '/assets/restaurante-comida-Cordero-deshuesado.jpg',
+    alt: 'Cordero deshuesado con patatas panadera'
+  },
+  {
+    match: 'San jacobo',
+    src: '/assets/restaurante-comida-San-jacobo.jpg',
+    alt: 'San jacobo de lomo de potes'
+  },
+  {
+    match: 'Steak tartar',
+    src: '/assets/restaurante-comida-Steak-tartar.jpg',
+    alt: 'Steak tartar'
+  },
+  {
+    match: 'Solomillo de cerdo ibérico',
+    src: '/assets/restaurante-comida-Solomillo.jpg',
+    alt: 'Solomillo de cerdo ibérico al queso de cabrales'
+  },
+  {
+    match: 'Callos a la montañesa',
+    src: '/assets/restaurante-comida-Callos.jpg',
+    alt: 'Callos a la montañesa'
+  },
+  {
+    match: 'Pluma ibérica',
+    src: '/assets/restaurante-comida-pluma.jpg',
+    alt: 'Pluma ibérica con chimichurri'
+  },
+  {
+    match: 'Pan blanco',
+    src: '/assets/restaurante-comida-pan-blanco.jpg',
+    alt: 'Pan blanco'
+  },
+  {
+    match: 'Pan de semillas',
+    src: '/assets/restaurante-comida-pan-semillas.jpg',
+    alt: 'Pan de semillas'
+  },
+  {
+    match: 'Cocktail de melón',
+    src: '/assets/restaurante-comida-cocktail-melon.jpg',
+    alt: 'Cocktail de melón'
+  },
+  {
+    match: 'Flan con nata',
+    src: '/assets/restaurante-comida-flan-nata.jpg',
+    alt: 'Flan con nata'
+  },
+  {
+    match: 'Tarta de chocolate',
+    src: '/assets/restaurante-comida-tarta-chocolate.jpg',
+    alt: 'Tarta de chocolate'
+  },
+  {
+    match: 'Fresa rellena',
+    src: '/assets/restaurante-comida-fresa.jpg',
+    alt: 'Fresa rellena de chocolate blanco'
+  },
+  {
+    match: 'Tarta de Queso de Cañadío',
+    src: '/assets/restaurante-comida-tarta-queso.jpg',
+    alt: 'Tarta de queso de Cañadío'
+  },
+  {
     match: 'Pincho tortilla',
     src: '/assets/restaurante-pincho-de-tortilla.jpg',
     alt: 'Pincho de tortilla casera'
   },
   {
-    match: 'Desayuno',
-    src: '/assets/restaurante-desayuno-frio.jpg',
-    alt: 'Desayuno en Gran Café Santander Madrid'
+    match: 'Pincho de tortilla',
+    src: '/assets/restaurante-pincho-de-tortilla.jpg',
+    alt: 'Pincho de tortilla con bonito'
   },
   {
     match: 'Donuts',
     src: '/assets/restaurante-comida-donut.jpg',
     alt: 'Donuts del Gran Café Santander'
+  },
+  {
+    match: 'Desayuno',
+    src: '/assets/restaurante-desayuno-frio.jpg',
+    alt: 'Desayuno en Gran Café Santander Madrid'
   }
 ];
 
