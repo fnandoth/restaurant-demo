@@ -1,0 +1,271 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const dishes = [
+  {
+    src: '/assets/restaurante-comida-nigiris.jpg',
+    name: 'Nigiris variados',
+    alt: 'Nigiris variados de la carta de Gran Café Santander',
+    price: '14,00€'
+  },
+  {
+    src: '/assets/restaurante-comida-Ensalada-de-tomates-cherry-con-queso-Jaradilla.jpg',
+    name: 'Ensalada de tomates cherrys',
+    alt: 'Ensalada de tomates cherry con queso Jaradilla',
+    price: '16,00€'
+  },
+  {
+    src: '/assets/restaurante-comida-Empanadillas.jpg',
+    name: 'Empanadillas de bonito',
+    alt: 'Empanadillas de bonito como las de Angélica',
+    price: '14,50€'
+  },
+  {
+    src: '/assets/restaurante-comida-Macarrones-sin-gluten.jpg',
+    name: 'Macarrones sin gluten',
+    alt: 'Macarrones sin gluten de bonito del norte con tomate',
+    price: '18,00€'
+  },
+  {
+    src: '/assets/restaurante-Pastel-de-queso-y-trufa.jpg',
+    name: 'Pastel de queso y trufa',
+    alt: 'Pastel de queso y trufa de Gran Café Santander',
+    price: '16,50€'
+  }
+];
+---
+
+<BaseLayout
+  title="Gran Café Santander · Cocina Cantabresa en Madrid"
+  description="Restaurante con cocina tradicional cantabresa en el corazón de Madrid desde 1981. Carta de temporada, ambiente elegante y reservas online en pleno Madrid."
+/>
+
+<div style="font-family: var(--font-body); color: var(--color-text-primary);">
+  <section
+    id="hero"
+    class="relative flex items-center"
+    style="min-height: 100svh;"
+  >
+    <img
+      src="/assets/restaurante-centrado.jpg"
+      alt="Exterior del Gran Café Santander en Madrid"
+      width="1600"
+      height="1000"
+      loading="eager"
+      fetchpriority="high"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+    <div class="absolute inset-0" style="background: rgba(28, 20, 16, 0.45);"></div>
+    <div class="relative z-10 mx-auto w-full px-6" style="max-width: var(--container-max);">
+      <p class="text-sm uppercase tracking-[0.24em]" style="color: var(--color-brand-light);">
+        Desde 1981 · Madrid
+      </p>
+      <h1
+        class="mt-4 text-4xl font-bold text-white sm:text-5xl md:text-6xl"
+        style="font-family: var(--font-display);"
+      >
+        Gran Café Santander
+      </h1>
+      <p class="mt-4 max-w-2xl text-lg font-light md:text-xl" style="color: rgba(255, 255, 255, 0.85);">
+        Cocina cántabra con alma madrileña, sabores del norte en un salón que invita a quedarse.
+      </p>
+      <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+        <a
+          href="/carta"
+          class="inline-flex items-center justify-center px-8 py-3 text-sm uppercase tracking-[0.18em] transition duration-300 ease-out hover:opacity-90"
+          style="background: var(--color-surface); color: var(--color-brand-dark);"
+        >
+          Ver la carta
+        </a>
+        <a
+          href="/reservas"
+          class="inline-flex items-center justify-center px-8 py-3 text-sm uppercase tracking-[0.18em] text-white transition duration-300 ease-out hover:opacity-90"
+          style="border: 1px solid var(--color-surface);"
+        >
+          Reservar mesa
+        </a>
+      </div>
+    </div>
+    <div class="absolute bottom-6 left-1/2 flex -translate-x-1/2 items-center justify-center">
+      <svg
+        aria-hidden="true"
+        class="h-6 w-6 animate-bounce text-white/80"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 9.75L12 17.25 4.5 9.75" />
+      </svg>
+    </div>
+  </section>
+
+  <section id="concepto" style="background: var(--color-cream); padding-block: var(--section-padding-y);">
+    <div class="mx-auto grid gap-10 px-6 md:grid-cols-2" style="max-width: var(--container-max);">
+      <div class="relative -mt-6 md:-mt-10">
+        <img
+          src="/assets/restaurante-interior-clientes-centrados.jpg"
+          alt="Interior del restaurante con clientes disfrutando"
+          width="800"
+          height="600"
+          loading="lazy"
+          decoding="async"
+          class="h-full w-full object-cover"
+        />
+      </div>
+      <div class="flex flex-col justify-center">
+        <p class="text-sm uppercase tracking-[0.2em]" style="color: var(--color-brand);">Nuestra historia</p>
+        <h2 class="mt-4 text-3xl md:text-4xl" style="font-family: var(--font-display);">
+          El sabor de Cantabria en el corazón de Madrid
+        </h2>
+        <p class="mt-4 text-base leading-relaxed" style="color: var(--color-text-muted);">
+          Desde 1981, Gran Café Santander es un punto de encuentro donde la tradición cántabra se sirve con
+          elegancia madrileña.
+        </p>
+        <p class="mt-3 text-base leading-relaxed" style="color: var(--color-text-muted);">
+          Nuestra cocina se apoya en el producto de temporada, el respeto por las recetas de siempre y la calidez
+          de un servicio cercano.
+        </p>
+        <p class="mt-3 text-base leading-relaxed" style="color: var(--color-text-muted);">
+          Un lugar para disfrutar sin prisa, compartir y celebrar los pequeños rituales de cada día.
+        </p>
+        <span class="mt-6 h-px w-16" style="background: var(--color-brand-light);"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="platos" style="background: var(--color-surface-alt); padding-block: var(--section-padding-y);">
+    <div class="mx-auto px-6 text-center" style="max-width: var(--container-max);">
+      <p class="text-sm uppercase tracking-[0.2em]" style="color: var(--color-brand);">Recomendados</p>
+      <h2 class="mt-3 text-3xl md:text-4xl" style="font-family: var(--font-display);">
+        Una selección de nuestra carta
+      </h2>
+      <p class="mt-3 text-base text-[color:var(--color-text-muted)]">
+        Cocina tradicional cantabresa con producto de temporada
+      </p>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {dishes.map((dish) => (
+          <article
+            class="overflow-hidden border transition duration-300 ease-out hover:-translate-y-1 hover:shadow-lg"
+            style="border-color: var(--color-warm-gray); background: var(--color-surface);"
+          >
+            <img
+              src={dish.src}
+              alt={dish.alt}
+              width="800"
+              height="600"
+              loading="lazy"
+              decoding="async"
+              class="h-60 w-full object-cover"
+            />
+            <div class="p-5 text-left">
+              <h3 class="text-xl" style="font-family: var(--font-display); font-weight: 600;">
+                {dish.name}
+              </h3>
+              <p class="mt-2 text-sm" style="color: var(--color-brand);">
+                {dish.price}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <a
+        href="/carta"
+        class="mt-10 inline-flex items-center justify-center text-sm uppercase tracking-[0.18em] transition duration-300 ease-out hover:opacity-80"
+        style="color: var(--color-brand);"
+      >
+        Ver carta completa
+      </a>
+    </div>
+  </section>
+
+  <section id="ambiente">
+    <img
+      src="/assets/restaurante-interior-varios-clientes.jpg"
+      alt="Ambiente del salón principal del restaurante"
+      width="1600"
+      height="460"
+      loading="lazy"
+      decoding="async"
+      class="h-[460px] w-full object-cover"
+    />
+  </section>
+
+  <section id="horario" style="background: var(--color-cream); padding-block: var(--section-padding-y);">
+    <h2 class="sr-only">Horario y ubicación</h2>
+    <div class="mx-auto grid gap-8 px-6 md:grid-cols-2" style="max-width: var(--container-max);">
+      <div class="border p-6" style="border-color: var(--color-warm-gray); background: var(--color-surface);">
+        <h3 class="text-2xl" style="font-family: var(--font-display);">Horario</h3>
+        <div class="mt-4 space-y-3" style="color: var(--color-text-muted);">
+          <div>
+            <p class="text-sm uppercase tracking-[0.18em]" style="color: var(--color-brand);">Local</p>
+            <p>Lun–Vie 08:00–01:00</p>
+            <p>Sáb, Dom y Festivo 09:00–01:00</p>
+          </div>
+          <div>
+            <p class="text-sm uppercase tracking-[0.18em]" style="color: var(--color-brand);">Cocina</p>
+            <p>Lun–Jue 13:00–16:00 / 20:00–23:00</p>
+            <p>Vie–Sáb 13:00–16:30 / 20:00–23:30</p>
+            <p>Dom 13:00–16:30 / 20:00–23:00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border p-6" style="border-color: var(--color-warm-gray); background: var(--color-surface);">
+        <h3 class="text-2xl" style="font-family: var(--font-display);">Ubicación</h3>
+        <p class="mt-4" style="color: var(--color-text-muted);">Plaza de Santa Bárbara, 4 · Madrid 28004</p>
+        <p style="color: var(--color-text-muted);">Tel. 914 457 295</p>
+        <a
+          href="/contacto"
+          class="mt-4 inline-flex items-center text-sm uppercase tracking-[0.18em] transition duration-300 ease-out hover:opacity-80"
+          style="color: var(--color-brand);"
+        >
+          Cómo llegar
+        </a>
+        <img
+          src="/assets/restaurante-afuera-patio.jpg"
+          alt="Terraza exterior del Gran Café Santander"
+          width="700"
+          height="420"
+          loading="lazy"
+          decoding="async"
+          class="mt-6 h-48 w-full object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="cta-reservas"
+    class="relative overflow-hidden"
+    style="background: var(--color-brand-dark); color: var(--color-surface); padding-block: var(--section-padding-y);"
+  >
+    <img
+      src="/assets/restaurante-interior-camarero.jpg"
+      alt="Servicio de sala del Gran Café Santander"
+      width="1600"
+      height="900"
+      loading="lazy"
+      decoding="async"
+      class="absolute inset-0 h-full w-full object-cover"
+      style="opacity: 0.15;"
+    />
+    <div class="relative z-10 mx-auto flex flex-col items-start gap-4 px-6 text-left" style="max-width: var(--container-max);">
+      <h2 class="text-3xl md:text-4xl" style="font-family: var(--font-display);">
+        ¿Tienes una ocasión especial?
+      </h2>
+      <p class="max-w-xl text-base text-white/85">
+        Reserva tu mesa y deja que nuestro equipo prepare una experiencia a la altura de tu celebración.
+      </p>
+      <a
+        href="/reservas"
+        class="inline-flex items-center justify-center px-8 py-3 text-sm uppercase tracking-[0.18em] transition duration-300 ease-out hover:opacity-90"
+        style="background: var(--color-surface); color: var(--color-brand-dark);"
+      >
+        Reservar mesa
+      </a>
+    </div>
+  </section>
+</div>

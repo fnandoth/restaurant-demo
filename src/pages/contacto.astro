@@ -1,0 +1,341 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contacto y Cómo Llegar · Gran Café Santander Madrid"
+  description="Gran Café Santander · Plaza de Santa Bárbara, 4 · 28004 Madrid · Tel. 914 457 295. Horarios, mapa y cómo llegar en metro o bus desde el centro de Madrid."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+      {JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        name: 'Gran Café Santander',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Plaza de Santa Bárbara, 4',
+          addressLocality: 'Madrid',
+          postalCode: '28004',
+          addressCountry: 'ES'
+        },
+        telephone: '+34914457295',
+        hasMap: 'https://maps.google.com/?q=Plaza+de+Santa+Bárbara+4+Madrid'
+      })}
+    </script>
+  </Fragment>
+  <section class="hero hero-contacto">
+    <img
+      src="/assets/restaurante-afuera-patio.jpg"
+      alt="Terraza exterior del Gran Café Santander"
+      width="1600"
+      height="900"
+      loading="eager"
+      fetchpriority="high"
+      class="hero-media"
+    />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Encuéntranos</h1>
+      <p>Plaza de Santa Bárbara · Madrid</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Contacto y ubicación</h2>
+
+        <div class="info-item">
+          <span class="info-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M12 21s7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 7 12 7 12z" />
+              <circle cx="12" cy="9" r="2.5" />
+            </svg>
+          </span>
+          <div>
+            <p class="info-title">Dirección</p>
+            <p>Plaza de Santa Bárbara, 4</p>
+            <p>28004 Madrid</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M4 5.5c4.5 7.5 7 10 14 14l2-2c1-1 1-2.5 0-3.5l-2.5-2c-0.8-0.6-1.9-0.5-2.6 0.2l-0.9 0.9c-2-1.3-3.7-3-5-5l0.9-0.9c0.7-0.7 0.8-1.8 0.2-2.6L7.5 2c-1-1-2.5-1-3.5 0l-2 2z" />
+            </svg>
+          </span>
+          <div>
+            <p class="info-title">Teléfono</p>
+            <a href="tel:+34914457295">914 457 295</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="8" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+          </span>
+          <div>
+            <p class="info-title">Horario del local</p>
+            <p>Lunes – Viernes: 08:00 – 01:00</p>
+            <p>Sábado, Domingo y Festivo: 09:00 – 01:00</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <span class="info-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M6 3v7a3 3 0 0 0 6 0V3" />
+              <path d="M6 14v7" />
+              <path d="M12 14v7" />
+              <path d="M14 4h4" />
+              <path d="M16 4v16" />
+            </svg>
+          </span>
+          <div>
+            <p class="info-title">Horario de cocina</p>
+            <p>Lunes – Jueves: 13:00–16:00 / 20:00–23:00</p>
+            <p>Viernes – Sábado: 13:00–16:30 / 20:00–23:30</p>
+            <p>Domingo: 13:00–16:30 / 20:00–23:00</p>
+          </div>
+        </div>
+
+        <a href="/reservas" class="cta-button">Reservar mesa</a>
+      </div>
+
+      <div class="map-wrapper" style="height: 460px; border-radius: 4px; overflow: hidden;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.2985!2d-3.700474!3d40.426440!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422897b7c30f73%3A0x0!2sPlaza+de+Santa+B%C3%A1rbara%2C+4%2C+28004+Madrid!5e0!3m2!1ses!2ses!4v1"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de Gran Café Santander en Google Maps"
+        ></iframe>
+      </div>
+    </div>
+
+    <!--
+      Note for developer: The `pb=` embed code above is a template. Replace it with the actual embed URL from
+      Google Maps → Share → Embed a map for "Plaza de Santa Bárbara 4, Madrid 28004".
+      The coordinates `40.426440, -3.700474` are approximate — verify against the actual restaurant pin.
+    -->
+  </section>
+
+  <section class="llegar-section">
+    <div class="llegar-header">
+      <h2>Cómo llegar</h2>
+    </div>
+    <div class="llegar-inner">
+      <div class="llegar-card">
+        <span class="info-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M4 16V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8" />
+            <path d="M7 16v4" />
+            <path d="M17 16v4" />
+            <path d="M6 10h12" />
+          </svg>
+        </span>
+        <h3>Metro</h3>
+        <p>Línea 4 (marrone), estación Alonso Martínez. 4 min caminando.</p>
+      </div>
+      <div class="llegar-card">
+        <span class="info-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M5 16h14" />
+            <path d="M7 6h10l2 6H5l2-6z" />
+            <path d="M7 16v2" />
+            <path d="M17 16v2" />
+          </svg>
+        </span>
+        <h3>Bus</h3>
+        <p>Líneas 3, 7, 14, 40. Parada Santa Bárbara.</p>
+      </div>
+      <div class="llegar-card">
+        <span class="info-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M6 7h12l1 5H5l1-5z" />
+            <path d="M5 12v5h14v-5" />
+            <path d="M8 12v5" />
+            <path d="M16 12v5" />
+          </svg>
+        </span>
+        <h3>Aparcamiento 24/7</h3>
+        <p>C. de Fernando el Santo, 11, Chamberí, 28010 a 5 min.</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .hero {
+      position: relative;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--color-surface);
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 60%;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(28, 20, 16, 0.45);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 1.5rem;
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-content p {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      opacity: 0.85;
+    }
+
+    .contact-section {
+      padding: var(--section-padding-y) 0;
+      background: var(--color-surface);
+    }
+
+    .contact-grid {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      gap: 2.5rem;
+    }
+
+    .contact-info h2 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      color: var(--color-text-primary);
+    }
+
+    .info-icon {
+      color: var(--color-brand);
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .info-title {
+      font-family: var(--font-body);
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .info-item a {
+      color: var(--color-brand);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 300ms ease-out;
+    }
+
+    .info-item a:hover {
+      color: var(--color-brand-dark);
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--color-brand);
+      color: var(--color-surface);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: background-color 300ms ease-out;
+    }
+
+    .cta-button:hover {
+      background: var(--color-brand-dark);
+    }
+
+    .llegar-section {
+      background: var(--color-surface-alt);
+      padding: 3rem 0;
+    }
+
+    .llegar-header {
+      max-width: var(--container-max);
+      margin: 0 auto 1.5rem;
+      padding: 0 1.5rem;
+    }
+
+    .llegar-header h2 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--color-text-primary);
+    }
+
+    .llegar-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .llegar-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-warm-gray);
+      padding: 1.5rem;
+      border-radius: 4px;
+    }
+
+    .llegar-card h3 {
+      font-family: var(--font-display);
+      margin: 0.5rem 0 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .llegar-card p {
+      color: var(--color-text-muted);
+    }
+
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+
+      .llegar-inner {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+  </style>
+</BaseLayout>

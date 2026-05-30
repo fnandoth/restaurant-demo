@@ -1,0 +1,88 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+
+const { title, description, ogImage = '/assets/restaurante-centrado.jpg' } = Astro.props;
+const siteName = 'Gran Café Santander';
+const siteUrl = 'https://grancafesantander.es';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const ogImageUrl = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteUrl).toString();
+const ogType = Astro.url.pathname === '/' ? 'restaurant' : 'website';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Restaurant',
+  name: 'Gran Café Santander',
+  url: siteUrl,
+  telephone: '+34914457295',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Plaza de Santa Bárbara, 4',
+    addressLocality: 'Madrid',
+    postalCode: '28004',
+    addressCountry: 'ES'
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 40.42640,
+    longitude: -3.69826
+  },
+  servesCuisine: 'Spanish, Cantabrian',
+  priceRange: '€€€',
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '01:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday', 'Sunday'], opens: '09:00', closes: '01:00' }
+  ],
+  hasMenu: `${siteUrl}/carta`,
+  reservationUrl: `${siteUrl}/reservas`,
+  image: `${siteUrl}/assets/restaurante-centrado.jpg`
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#8B6347" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preload" as="image" href="/assets/restaurante-centrado.jpg" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content={siteName} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+    <slot name="head" />
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

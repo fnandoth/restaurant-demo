@@ -1,0 +1,234 @@
+{
+  "menu": [
+    {
+      "categoria": "Desayuno Gran Café Santander (Café o infusión con su acompañamiento a elegir)",
+      "platos": [
+        {
+          "nombre": "Tostada de pan blanco de masa madre con AOVE y tomate natural",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Tostada de pan de semillas con AOVE y tomate natural",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Croissant de mantequilla",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Sobaos pasiegos de la Vega del Pas",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Corbatas de Unquera",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Magdalenas caseras de Unquera",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Donuts",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Complemente su desayuno",
+      "platos": [
+        {
+          "nombre": "Zumo de naranja",
+          "precio": "3,00 €",
+          "alergenos": "",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Fruta variada",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Carta de Desayunos y Meriendas",
+      "platos": [
+        {
+          "nombre": "Croissant de mantequilla",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Sobaos pasiegos de la Vega de Pas",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Corbatas de Unquera",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Magdalenas caseras de Unquera",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Donuts",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Bollo de mantequilla",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Bizcocho casero de zanahoria",
+          "precio": "4,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Bizcocho casero de yogur y limón",
+          "precio": "4,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Yogurt Natural con muesli",
+          "precio": "4,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Previa modificación, apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Trenza de hojaldre",
+          "precio": "4,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Quesada Pasiega \"El Macho\"",
+          "precio": "4,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Pincho tortilla",
+          "precio": "4,80 €",
+          "alergenos": "",
+          "apto_celiacos": "Previa modificación, apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Pincho de tortilla de bonito",
+          "precio": "5,00 €",
+          "alergenos": "",
+          "apto_celiacos": "Previa modificación, apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Sandwich mixto",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Sandwich y tostas",
+      "platos": [
+        {
+          "nombre": "Sandwich de pavo",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Bagel con salmón ahumado y queso crema",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Tosta de jamón Ibérico",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Tosta de aguacate y tomate",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Croissant vegetal",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Sandwich california",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Sandwich \"La Madrid\"",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        }
+      ]
+    }
+  ]
+}

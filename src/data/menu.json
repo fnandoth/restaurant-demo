@@ -1,0 +1,380 @@
+{
+  "menu": [
+    {
+      "categoria": "Entrantes fríos",
+      "platos": [
+        {
+          "nombre": "Anchoas con brioche y mantequilla",
+          "precio": "3,10 € / ud",
+          "alergenos": "Presencia de pescado, gluten y derivado lácteo (mantequilla)",
+          "apto_celiacos": "Previa modificación, apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Ensaladilla rusa \"La Maruca\"",
+          "precio": "15,50 €",
+          "alergenos": "Presencia de huevo, sulfitos, pescado, mostaza y gluten",
+          "apto_celiacos": "Previa modificación, apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Ensalada de jamón con virutas de foie",
+          "precio": "18,50 €",
+          "alergenos": "Presencia de mostaza y sulfitos",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Ensalada de tomates cherrys, queso jaradilla, almendras y salmorejo",
+          "precio": "16,00 €",
+          "alergenos": "Presencia de leche y derivados lácteos (nata y queso), frutos secos con cáscara, gluten, soja y sulfitos",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Ensalada verde (\"healthy\")",
+          "precio": "14,50 €",
+          "alergenos": "Presencia de soja, pescado, mostaza y sulfitos",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Nigiris variados",
+          "precio": "14,00 €",
+          "alergenos": "Presencia de huevo, mostaza, sulfitos, pescado, leche y derivado lácteo (nata), soja, gluten, crustáceos y moluscos",
+          "apto_celiacos": "Previa modificación, apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Pastel de queso y trufa",
+          "precio": "16,50 €",
+          "alergenos": "Presencia de derivado lácteo (queso), sulfitos, frutos secos con cáscara y gluten",
+          "apto_celiacos": "Previa modificación, apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Puding de mejillones en escabeche",
+          "precio": "15,00 €",
+          "alergenos": "Presencia de moluscos, sulfitos, pescado, huevo, mostaza, soja, leche y derivado lácteo (nata)",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Tartar de aguacate y salmón ahumado de \"Las Coruñesas\"",
+          "precio": "18,00 €",
+          "alergenos": "Presencia de pescado, sulfitos, derivados lácteos (nata y queso), frutos secos con cáscara, crustáceos, moluscos y mostaza",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Tartar de bonito",
+          "precio": "18,50 €",
+          "alergenos": "Presencia de pescado, soja, sulfitos, leche y derivados lácteos (queso) y apio",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Carpaccio de lomo de vaca con patatas y pimientos",
+          "precio": "19,50 €",
+          "alergenos": "Presencia de huevo, soja, crustáceos y sulfitos",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Entrantes calientes",
+      "platos": [
+        {
+          "nombre": "Croquetas de lacón y huevo cocido",
+          "precio": "15,50 €",
+          "alergenos": "Presencia de huevo, gluten, leche y derivados lácteos (nata y mantequilla)",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Patatas bravas",
+          "precio": "13,00 €",
+          "alergenos": "Presencia de huevo, sulfitos, soja, gluten y pescado",
+          "apto_celiacos": "Previa modificación, apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Empanadillas de bonito como las de Angélica",
+          "precio": "14,50 €",
+          "alergenos": "Presencia de pescado, huevo, soja, gluten y sulfitos",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Rabas de calamar, como en Santander",
+          "precio": "21,00 €",
+          "alergenos": "Presencia de moluscos y gluten",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Buñuelos de bacalao (los de la Maruca)",
+          "precio": "16,50 €",
+          "alergenos": "Presencia de leche y derivados lácteos (nata y mantequilla), pescado, gluten, sulfitos y huevo",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "\"Trozucos\" de merluza orly",
+          "precio": "22,00 €",
+          "alergenos": "Presencia de pescado, gluten, huevo y sulfitos",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Mejillones en salsa roja, con toque picante",
+          "precio": "17,00 €",
+          "alergenos": "Presencia de moluscos, pescado, soja, gluten, crustáceos y sulfitos",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Parada en \"Landa\" (Huevos con puré de morcilla y patatas en tempura)",
+          "precio": "16,50 €",
+          "alergenos": "Presencia de huevo, sulfitos, gluten y soja",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Verduras",
+      "platos": [
+        {
+          "nombre": "Menestras de verduras salteadas con jamón y patata cocida",
+          "precio": "16,50 €",
+          "alergenos": "Presencia de sulfitos, soja y pescado",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Alcachofas en salsa verde, con cocochas (sólo en temporada)",
+          "precio": "16,00 €",
+          "alergenos": "Presencia de pescado, sulfitos, derivados lácteos (mantequilla y nata) y gluten",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Pencas a la importancia con mejillones y langostinos",
+          "precio": "18,00 €",
+          "alergenos": "Presencia de crustáceos, moluscos, gluten, sulfitos y huevo",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Pastas y Arroces",
+      "platos": [
+        {
+          "nombre": "Lasaña boloñesa con crujiente de parmesano",
+          "precio": "19,00 €",
+          "alergenos": "Presencia de gluten, sulfitos, leche y derivados lácteos (mantequilla, nata y queso), huevo, frutos secos con cáscara y soja",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Linguine a la marinera",
+          "precio": "18,00 €",
+          "alergenos": "Presencia de gluten, soja, leche y derivados lácteos (queso y nata), pescado, huevo, crustáceos y moluscos",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Macarrones sin gluten, de bonito del norte con tomate",
+          "precio": "18,00 €",
+          "alergenos": "Presencia de huevos, leche y derivados lácteos, mostaza, soja, sésamo, frutos secos con cáscara, crustáceos, moluscos, pescado, apio y sulfitos",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Puntalete tratado como un rissoto",
+          "precio": "16,00 €",
+          "alergenos": "Presencia de gluten, leche y derivado lácteo (queso) y sulfitos",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Arroz negro con cachón",
+          "precio": "22,50 €",
+          "alergenos": "Presencia de crustáceos, pescado, soja, moluscos, huevo, leche y derivados lácteos (queso y nata) y sulfitos",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Arroz con verduras y setas",
+          "precio": "21,50 €",
+          "alergenos": "Presencia de pescado, soja, sulfitos, huevo, leche y derivados lácteos (nata)",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Pescados",
+      "platos": [
+        {
+          "nombre": "La merluza de \"Rula\" (rebozada, al ajillo con langostinos)",
+          "precio": "25,00 €",
+          "alergenos": "Presencia de pescado, crustáceos, gluten, huevo y sulfitos",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Merluza de anzuelo, a la plancha con patatas panadera y refrito",
+          "precio": "25,00 €",
+          "alergenos": "Presencia de pescado y sulfitos",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Merluza a la romana con pimientos verdes fritos",
+          "precio": "25,00 €",
+          "alergenos": "Presencia de pescado, gluten, huevo y sulfitos",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Chipirones encebollados, como en el Bº Pesquero Santander",
+          "precio": "23,00 €",
+          "alergenos": "Presencia de moluscos, pescado, soja, sulfitos, leche y derivado lácteo (mantequilla)",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Hamburguesa de bonito",
+          "precio": "21,00 €",
+          "alergenos": "Presencia de pescado, soja, sulfitos, gluten, huevo, leche y derivado lácteo (queso), frutos secos con cáscara, sésamo, cacahuetes, altramuces y mostaza",
+          "apto_celiacos": "Previa modificación, apto para celíacos",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Carnes",
+      "platos": [
+        {
+          "nombre": "Filetes rusos con foie",
+          "precio": "21,00 €",
+          "alergenos": "Presencia de gluten, huevo, leche y sulfitos",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Cordero deshuesado, con patatas panadera",
+          "precio": "22,00 €",
+          "alergenos": "Presencia de sulfitos",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "San jacobo de lomo de potes",
+          "precio": "19,50 €",
+          "alergenos": "Presencia de sulfitos, leche y derivado lácteo (queso), huevo y gluten",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Steak tartar",
+          "precio": "22,50 €",
+          "alergenos": "Presencia de huevo, soja, mostaza, sésamo y sulfitos",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Solomillo de cerdo ibérico al queso de cabrales",
+          "precio": "21,00 €",
+          "alergenos": "Presencia de leche y derivados lácteos (nata y queso) y sulfitos",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Callos a la montañesa",
+          "precio": "19,00 €",
+          "alergenos": "Presencia de sulfitos",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Pluma ibérica con chimichurri",
+          "precio": "23,50 €",
+          "alergenos": "Presencia de huevo y sulfitos",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Hamburguesa de ternera",
+          "precio": "15,00 €",
+          "alergenos": "Presencia de gluten, huevo, leche y derivado lácteo (queso), soja, sulfitos, mostaza y dióxido de azufre",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Panes",
+      "platos": [
+        {
+          "nombre": "Pan blanco",
+          "precio": "",
+          "alergenos": "Presencia de gluten. (Posible contaminación cruzada por manipulación de alimentos)",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Pan de semillas",
+          "precio": "",
+          "alergenos": "Presencia de gluten, sésamo y frutos secos con cáscara. (Posible contaminación cruzada por manipulación de alimentos)",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Postres",
+      "platos": [
+        {
+          "nombre": "Cocktail de melón",
+          "precio": "8,00 €",
+          "alergenos": "Presencia de sulfitos y derivados lácteos (queso y nata)",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Flan con nata",
+          "precio": "8,00 €",
+          "alergenos": "Presencia de huevo y derivado lácteo (nata)",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Tarta de chocolate",
+          "precio": "8,00 €",
+          "alergenos": "Presencia de gluten, huevo y derivados lácteos (nata, mantequilla y queso)",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Fresa rellena de chocolate blanco",
+          "precio": "8,50 €",
+          "alergenos": "Presencia de derivados lácteos (queso y nata) y huevo",
+          "apto_celiacos": "Apto para celíacos",
+          "imagen": ""
+        },
+        {
+          "nombre": "Tarta de Queso de Cañadío (1981)",
+          "precio": "8,50 €",
+          "alergenos": "Presencia de derivados lácteos (nata, mantequilla, queso), huevo, sulfitos, soja y gluten",
+          "apto_celiacos": "No apto para celíacos",
+          "imagen": ""
+        }
+      ]
+    }
+  ]
+}
