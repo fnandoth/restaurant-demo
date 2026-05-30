@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 
 interface Props {
   title: string;
@@ -55,7 +56,7 @@ const jsonLd = {
     <link rel="canonical" href={canonicalUrl} />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#8B6347" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/assets/mini-logotipo.png" />
     <link rel="preload" as="image" href="/assets/restaurante-centrado.jpg" />
 
     <meta property="og:title" content={title} />
@@ -84,5 +85,6 @@ const jsonLd = {
       <slot />
     </main>
     <Footer />
+    <CookieConsent />
   </body>
 </html>

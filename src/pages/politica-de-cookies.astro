@@ -1,0 +1,312 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Política de Cookies · Gran Café Santander"
+  description="Información sobre el uso de cookies, tipos, finalidades y gestión en el sitio de Gran Café Santander."
+>
+  <section class="cookies-hero">
+    <div class="cookies-hero-inner">
+      <p class="cookies-eyebrow">RGPD · Directiva ePrivacy</p>
+      <h1>Política de Cookies</h1>
+      <p class="cookies-subtitle">
+        Esta política explica qué son las cookies, qué tipos utilizamos y cómo puedes gestionarlas.
+      </p>
+    </div>
+  </section>
+
+  <section class="cookies-content">
+    <div class="cookies-container">
+      <article class="cookies-block">
+        <h2>¿Qué son las cookies?</h2>
+        <p>
+          Las cookies son pequeños archivos que se descargan en tu dispositivo cuando visitas un sitio web. Este
+          texto contiene información sobre tu navegación, hábitos, preferencias y personalizaciones de contenidos.
+          Existen otras tecnologías similares que también se usan para recopilar datos de navegación y que tratamos
+          como “cookies” a efectos de esta política.
+        </p>
+      </article>
+
+      <article class="cookies-block">
+        <h2>¿Para qué se utilizan las cookies en esta web?</h2>
+        <p>
+          Utilizamos cookies para facilitar la navegación, recordar tus preferencias y analizar el tráfico del sitio
+          con el fin de mejorar nuestros contenidos y servicios.
+        </p>
+        <p>
+          En determinados casos y con tu consentimiento, podremos utilizar cookies para personalizar contenidos y
+          ofrecer una experiencia más ajustada a tus intereses.
+        </p>
+      </article>
+
+      <article class="cookies-block">
+        <h2>¿Para qué NO se utilizan?</h2>
+        <p>
+          No se almacenan datos sensibles de identificación personal ni se utilizan cookies para fines distintos a los
+          descritos en esta política.
+        </p>
+      </article>
+
+      <article class="cookies-block">
+        <h2>¿Quién utiliza la información?</h2>
+        <p>
+          La información obtenida a través de las cookies es utilizada por Gran Café Santander y por terceros que
+          prestan servicios de analítica web, como Google Analytics.
+        </p>
+      </article>
+
+      <article class="cookies-block">
+        <h2>¿Cómo gestionar o desactivar las cookies?</h2>
+        <p>
+          Puedes permitir, bloquear o eliminar las cookies desde la configuración de tu navegador. Consulta la ayuda
+          de cada navegador en estos enlaces:
+        </p>
+        <ul>
+          <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
+          <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a></li>
+          <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a></li>
+          <li><a href="https://support.microsoft.com/es-es/microsoft-edge/administrar-cookies-en-microsoft-edge-ver-permitir-bloquear-eliminar-y-usar-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener noreferrer">Microsoft Edge</a></li>
+        </ul>
+        <p>
+          Si prefieres evitar el uso de cookies no esenciales, puedes rechazarlas o configurar tus preferencias desde
+          el panel de consentimiento. Si ya las has aceptado, no volveremos a preguntarte a menos que borres las
+          cookies o actualices tus preferencias.
+        </p>
+      </article>
+
+      <article class="cookies-block">
+        <h2>Tabla de cookies utilizadas</h2>
+        <div class="cookies-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Propia / Tercero</th>
+                <th>Tipo</th>
+                <th>Finalidad</th>
+                <th>Duración</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PHP_SESSID</td>
+                <td>Propia</td>
+                <td>Técnica</td>
+                <td>Sesión de usuario PHP, datos de estado temporales</td>
+                <td>Sesión</td>
+              </tr>
+              <tr>
+                <td>cookie_consent</td>
+                <td>Propia</td>
+                <td>Técnica / Preferencia</td>
+                <td>Almacena la decisión del usuario sobre el consentimiento de cookies</td>
+                <td>1 año</td>
+              </tr>
+              <tr>
+                <td>_ga</td>
+                <td>Tercero — Google</td>
+                <td>Analítica</td>
+                <td>Distingue usuarios únicos para Google Analytics</td>
+                <td>2 años</td>
+              </tr>
+              <tr>
+                <td>_gat</td>
+                <td>Tercero — Google</td>
+                <td>Analítica</td>
+                <td>Limita la tasa de solicitudes a Google Analytics</td>
+                <td>1 día</td>
+              </tr>
+              <tr>
+                <td>_gid</td>
+                <td>Tercero — Google</td>
+                <td>Analítica</td>
+                <td>Almacena y actualiza el valor único de cada página visitada</td>
+                <td>1 día</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button id="cookie-manage" class="cookies-manage" type="button">Gestionar cookies</button>
+      </article>
+
+      <article class="cookies-block">
+        <h2>Cambios en la política de cookies</h2>
+        <p>
+          Esta política puede actualizarse para adaptarse a cambios legales o técnicos. Publicaremos cualquier
+          modificación relevante en esta misma página.
+        </p>
+      </article>
+
+      <article class="cookies-block">
+        <h2>Contacto</h2>
+        <p>
+          Para cualquier duda sobre nuestra política de cookies, puedes escribirnos a
+          <a href="mailto:grupolbacomunicacion@gmail.com">grupolbacomunicacion@gmail.com</a>.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <script>
+    const manageButton = document.getElementById('cookie-manage');
+    if (manageButton) {
+      manageButton.addEventListener('click', () => {
+        localStorage.removeItem('cookie_consent');
+        window.dispatchEvent(new Event('open-cookie-preferences'));
+      });
+    }
+  </script>
+
+  <style>
+    .cookies-hero {
+      background: var(--color-surface-alt);
+      padding: 3.5rem 0;
+    }
+
+    .cookies-hero-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .cookies-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.8rem;
+      color: var(--color-brand);
+      margin-bottom: 0.75rem;
+    }
+
+    .cookies-hero h1 {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-text-primary);
+    }
+
+    .cookies-subtitle {
+      color: var(--color-text-muted);
+      max-width: 720px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .cookies-content {
+      background: var(--color-cream);
+      padding: var(--section-padding-y) 0;
+    }
+
+    .cookies-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      gap: 2.5rem;
+    }
+
+    .cookies-block h2 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .cookies-block p {
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin: 0 0 1rem;
+    }
+
+    .cookies-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .cookies-block ul {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: var(--color-text-muted);
+      display: grid;
+      gap: 0.5rem;
+      line-height: 1.7;
+    }
+
+    .cookies-block a {
+      color: var(--color-brand);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .cookies-block a:hover {
+      color: var(--color-brand-dark);
+    }
+
+    .cookies-table {
+      border: 1px solid var(--color-warm-gray);
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--color-surface);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th,
+    td {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--color-warm-gray);
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--color-surface-alt);
+      font-weight: 600;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .cookies-manage {
+      margin-top: 1.25rem;
+      border: 1px solid var(--color-brand);
+      background: transparent;
+      color: var(--color-brand-dark);
+      padding: 0.7rem 1.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: background-color 200ms ease, color 200ms ease;
+    }
+
+    .cookies-manage:hover {
+      background: var(--color-brand);
+      color: var(--color-surface);
+    }
+
+    @media (max-width: 720px) {
+      table {
+        font-size: 0.9rem;
+      }
+
+      th,
+      td {
+        padding: 0.7rem 0.75rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .cookies-hero {
+        padding: 4.5rem 0;
+      }
+
+      .cookies-hero h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</BaseLayout>
