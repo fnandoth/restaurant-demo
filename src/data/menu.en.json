@@ -1,0 +1,380 @@
+{
+  "menu": [
+    {
+      "categoria": "Cold starters",
+      "platos": [
+        {
+          "nombre": "Anchovies with brioche and butter",
+          "precio": "3,10 € / ud",
+          "alergenos": "Contains fish, gluten, and dairy derivative (butter)",
+          "apto_celiacos": "Suitable for celiacs upon modification request",
+          "imagen": ""
+        },
+        {
+          "nombre": "\"La Maruca\" Russian salad",
+          "precio": "15,50 €",
+          "alergenos": "Contains egg, sulfites, fish, mustard, and gluten",
+          "apto_celiacos": "Suitable for celiacs upon modification request",
+          "imagen": ""
+        },
+        {
+          "nombre": "Ham salad with foie shavings",
+          "precio": "18,50 €",
+          "alergenos": "Contains mustard and sulfites",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Cherry tomato, jaradilla cheese, almond, and salmorejo salad",
+          "precio": "16,00 €",
+          "alergenos": "Contains milk and dairy derivatives (cream and cheese), tree nuts, gluten, soy, and sulfites",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Green salad (\"healthy\")",
+          "precio": "14,50 €",
+          "alergenos": "Contains soy, fish, mustard, and sulfites",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Assorted nigiris",
+          "precio": "14,00 €",
+          "alergenos": "Contains egg, mustard, sulfites, fish, milk and dairy derivative (cream), soy, gluten, crustaceans, and mollusks",
+          "apto_celiacos": "Suitable for celiacs upon modification request",
+          "imagen": ""
+        },
+        {
+          "nombre": "Cheese and truffle pie",
+          "precio": "16,50 €",
+          "alergenos": "Contains dairy derivative (cheese), sulfites, tree nuts, and gluten",
+          "apto_celiacos": "Suitable for celiacs upon modification request",
+          "imagen": ""
+        },
+        {
+          "nombre": "Pickled mussel pudding",
+          "precio": "15,00 €",
+          "alergenos": "Contains mollusks, sulfites, fish, egg, mustard, soy, milk, and dairy derivative (cream)",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Avocado and \"Las Coruñesas\" smoked salmon tartare",
+          "precio": "18,00 €",
+          "alergenos": "Contains fish, sulfites, dairy derivatives (cream and cheese), tree nuts, crustaceans, mollusks, and mustard",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Bonito tuna tartare",
+          "precio": "18,50 €",
+          "alergenos": "Contains fish, soy, sulfites, milk and dairy derivatives (cheese), and celery",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Beef loin carpaccio with potatoes and peppers",
+          "precio": "19,50 €",
+          "alergenos": "Contains egg, soy, crustaceans, and sulfites",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Hot starters",
+      "platos": [
+        {
+          "nombre": "Pork shoulder and boiled egg croquettes",
+          "precio": "15,50 €",
+          "alergenos": "Contains egg, gluten, milk, and dairy derivatives (cream and butter)",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Patatas bravas",
+          "precio": "13,00 €",
+          "alergenos": "Contains egg, sulfites, soy, gluten, and fish",
+          "apto_celiacos": "Suitable for celiacs upon modification request",
+          "imagen": ""
+        },
+        {
+          "nombre": "Bonito tuna empanadillas like Angélica's",
+          "precio": "14,50 €",
+          "alergenos": "Contains fish, egg, soy, gluten, and sulfites",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Fried squid rings (Rabas), like in Santander",
+          "precio": "21,00 €",
+          "alergenos": "Contains mollusks and gluten",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Cod fritters (La Maruca style)",
+          "precio": "16,50 €",
+          "alergenos": "Contains milk and dairy derivatives (cream and butter), fish, gluten, sulfites, and egg",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Orly-style hake bites (\"Trozucos\")",
+          "precio": "22,00 €",
+          "alergenos": "Contains fish, gluten, egg, and sulfites",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Mussels in red sauce, with a spicy touch",
+          "precio": "17,00 €",
+          "alergenos": "Contains mollusks, fish, soy, gluten, crustaceans, and sulfites",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Stop at \"Landa\" (Eggs with black pudding puree and tempura potatoes)",
+          "precio": "16,50 €",
+          "alergenos": "Contains egg, sulfites, gluten, and soy",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Vegetables",
+      "platos": [
+        {
+          "nombre": "Sautéed vegetable stew with ham and boiled potato",
+          "precio": "16,50 €",
+          "alergenos": "Contains sulfites, soy, and fish",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Artichokes in green sauce, with kokotxas (in season only)",
+          "precio": "16,00 €",
+          "alergenos": "Contains fish, sulfites, dairy derivatives (butter and cream), and gluten",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Chard stems \"a la importancia\" with mussels and prawns",
+          "precio": "18,00 €",
+          "alergenos": "Contains crustaceans, mollusks, gluten, sulfites, and egg",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Pasta and Rice",
+      "platos": [
+        {
+          "nombre": "Bolognese lasagna with parmesan crisp",
+          "precio": "19,00 €",
+          "alergenos": "Contains gluten, sulfites, milk and dairy derivatives (butter, cream, and cheese), egg, tree nuts, and soy",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Seafood linguine",
+          "precio": "18,00 €",
+          "alergenos": "Contains gluten, soy, milk and dairy derivatives (cheese and cream), fish, egg, crustaceans, and mollusks",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Gluten-free macaroni, with albacore tuna and tomato",
+          "precio": "18,00 €",
+          "alergenos": "Contains eggs, milk and dairy derivatives, mustard, soy, sesame, tree nuts, crustaceans, mollusks, fish, celery, and sulfites",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Puntalete pasta treated like a risotto",
+          "precio": "16,00 €",
+          "alergenos": "Contains gluten, milk, dairy derivative (cheese), and sulfites",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Black rice with cuttlefish (cachón)",
+          "precio": "22,50 €",
+          "alergenos": "Contains crustaceans, fish, soy, mollusks, egg, milk and dairy derivatives (cheese and cream), and sulfites",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Rice with vegetables and mushrooms",
+          "precio": "21,50 €",
+          "alergenos": "Contains fish, soy, sulfites, egg, milk and dairy derivatives (cream)",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Fish",
+      "platos": [
+        {
+          "nombre": "\"Rula\"'s hake (battered, garlic style with prawns)",
+          "precio": "25,00 €",
+          "alergenos": "Contains fish, crustaceans, gluten, egg, and sulfites",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Line-caught hake, grilled with baker's potatoes and refrito",
+          "precio": "25,00 €",
+          "alergenos": "Contains fish and sulfites",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Roman-style hake with fried green peppers",
+          "precio": "25,00 €",
+          "alergenos": "Contains fish, gluten, egg, and sulfites",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Squid with onions, like in Santander's Fishing Quarter",
+          "precio": "23,00 €",
+          "alergenos": "Contains mollusks, fish, soy, sulfites, milk, and dairy derivative (butter)",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Bonito tuna burger",
+          "precio": "21,00 €",
+          "alergenos": "Contains fish, soy, sulfites, gluten, egg, milk and dairy derivative (cheese), tree nuts, sesame, peanuts, lupins, and mustard",
+          "apto_celiacos": "Suitable for celiacs upon modification request",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Meats",
+      "platos": [
+        {
+          "nombre": "Russian steaks with foie",
+          "precio": "21,00 €",
+          "alergenos": "Contains gluten, egg, milk, and sulfites",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Boneless lamb, with baker's potatoes",
+          "precio": "22,00 €",
+          "alergenos": "Contains sulfites",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Pork loin \"San Jacobo\" (breaded and stuffed)",
+          "precio": "19,50 €",
+          "alergenos": "Contains sulfites, milk, dairy derivative (cheese), egg, and gluten",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Steak tartare",
+          "precio": "22,50 €",
+          "alergenos": "Contains egg, soy, mustard, sesame, and sulfites",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Iberian pork tenderloin with Cabrales cheese",
+          "precio": "21,00 €",
+          "alergenos": "Contains milk and dairy derivatives (cream and cheese), and sulfites",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Montañesa-style tripe",
+          "precio": "19,00 €",
+          "alergenos": "Contains sulfites",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Iberian pluma with chimichurri",
+          "precio": "23,50 €",
+          "alergenos": "Contains egg and sulfites",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Beef burger",
+          "precio": "15,00 €",
+          "alergenos": "Contains gluten, egg, milk and dairy derivative (cheese), soy, sulfites, mustard, and sulfur dioxide",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Breads",
+      "platos": [
+        {
+          "nombre": "White bread",
+          "precio": "",
+          "alergenos": "Contains gluten. (Possible cross-contamination from food handling)",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Seed bread",
+          "precio": "",
+          "alergenos": "Contains gluten, sesame, and tree nuts. (Possible cross-contamination from food handling)",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Desserts",
+      "platos": [
+        {
+          "nombre": "Melon cocktail",
+          "precio": "8,00 €",
+          "alergenos": "Contains sulfites and dairy derivatives (cheese and cream)",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Crème caramel (Flan) with cream",
+          "precio": "8,00 €",
+          "alergenos": "Contains egg and dairy derivative (cream)",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Chocolate cake",
+          "precio": "8,00 €",
+          "alergenos": "Contains gluten, egg, and dairy derivatives (cream, butter, and cheese)",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Strawberry stuffed with white chocolate",
+          "precio": "8,50 €",
+          "alergenos": "Contains dairy derivatives (cheese and cream), and egg",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Cañadío Cheesecake (1981)",
+          "precio": "8,50 €",
+          "alergenos": "Contains dairy derivatives (cream, butter, cheese), egg, sulfites, soy, and gluten",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        }
+      ]
+    }
+  ]
+}

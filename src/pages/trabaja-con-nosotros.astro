@@ -19,16 +19,16 @@ import "../styles/trabaja-con-nosotros.css";
     />
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Trabaja con nosotros</h1>
-      <p>Queremos conocerte. Envíanos tu candidatura y tu CV.</p>
+      <h1 data-i18n="trabaja.heroTitle">Trabaja con nosotros</h1>
+      <p data-i18n="trabaja.heroSubtitle">Queremos conocerte. Envíanos tu candidatura y tu CV.</p>
     </div>
   </section>
 
   <section class="careers-section">
     <div class="careers-container">
       <div class="careers-intro">
-        <h2>Únete al equipo del Gran Café Santander</h2>
-        <p>
+        <h2 data-i18n="trabaja.sectionTitle">Únete al equipo del Gran Café Santander</h2>
+        <p data-i18n="trabaja.sectionDesc">
           Buscamos personas apasionadas por la hostelería y el servicio.
           Completa el formulario y cuéntanos tu experiencia.
         </p>
@@ -42,7 +42,7 @@ import "../styles/trabaja-con-nosotros.css";
       >
         <div class="form-grid">
           <div class="form-field">
-            <label for="nombre">Nombre</label>
+            <label for="nombre" data-i18n="trabaja.labelName">Nombre</label>
             <input
               id="nombre"
               name="nombre"
@@ -55,7 +55,7 @@ import "../styles/trabaja-con-nosotros.css";
           </div>
 
           <div class="form-field">
-            <label for="apellido">Apellido</label>
+            <label for="apellido" data-i18n="trabaja.labelSurname">Apellido</label>
             <input
               id="apellido"
               name="apellido"
@@ -69,7 +69,7 @@ import "../styles/trabaja-con-nosotros.css";
           </div>
 
           <div class="form-field">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="trabaja.labelEmail">Email</label>
             <input
               id="email"
               name="email"
@@ -82,7 +82,7 @@ import "../styles/trabaja-con-nosotros.css";
           </div>
 
           <div class="form-field">
-            <label for="telefono">Teléfono</label>
+            <label for="telefono" data-i18n="trabaja.labelPhone">Teléfono</label>
             <input
               id="telefono"
               name="telefono"
@@ -98,7 +98,7 @@ import "../styles/trabaja-con-nosotros.css";
           </div>
 
           <div class="form-field full">
-            <label for="mensaje">Mensaje / Presentación</label>
+            <label for="mensaje" data-i18n="trabaja.labelMessage">Mensaje / Presentación</label>
             <textarea
               id="mensaje"
               name="mensaje"
@@ -110,7 +110,7 @@ import "../styles/trabaja-con-nosotros.css";
           </div>
 
           <div class="form-field full">
-            <label for="cv">Adjuntar CV (PDF)</label>
+            <label for="cv" data-i18n="trabaja.labelCV">Adjuntar CV (PDF)</label>
             <div class="file-input">
               <input
                 id="cv"
@@ -124,6 +124,7 @@ import "../styles/trabaja-con-nosotros.css";
                 id="cv-file-name"
                 class="file-name"
                 data-default="Ningún archivo seleccionado"
+                data-i18n="trabaja.noFile"
               >
                 Ningún archivo seleccionado
               </span>
@@ -140,12 +141,13 @@ import "../styles/trabaja-con-nosotros.css";
                 required
                 aria-describedby="privacy-error"
               />
-              <span>
+              <span data-i18n="trabaja.privacy">
                 He leído y acepto la
                 <a
                   href="/politica-de-privacidad/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-i18n="trabaja.privacyLink"
                 >
                   Política de Privacidad
                 </a>
@@ -157,7 +159,7 @@ import "../styles/trabaja-con-nosotros.css";
         </div>
 
         <div class="form-actions">
-          <button class="submit-button" type="submit">Enviar</button>
+          <button class="submit-button" type="submit" data-i18n="trabaja.submit">Enviar</button>
         </div>
 
         <p

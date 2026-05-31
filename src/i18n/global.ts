@@ -136,6 +136,126 @@
     'privacidad.eyebrow':  { es: 'RGPD · LSSI-CE', en: 'GDPR · LSSI-CE' },
     'privacidad.title':    { es: 'Política de Privacidad', en: 'Privacy Policy' },
     'privacidad.subtitle': { es: 'Información sobre el tratamiento de datos personales y tus derechos como usuario.', en: 'Information about the processing of personal data and your rights as a user.' },
+    'contacto.heroSubtitle': {
+  es: 'Plaza de Santa Bárbara · Madrid',
+  en: 'Plaza de Santa Bárbara · Madrid'
+},
+'contacto.mapTitle': {
+  es: 'Ubicación de Gran Café Santander en Google Maps',
+  en: 'Gran Café Santander on Google Maps'
+},
+
+'reservas.widgetPending': {
+  es: 'Widget de reservas — pendiente de configuración.',
+  en: 'Booking widget — pending configuration.'
+},
+'reservas.monThuHours': {
+  es: '13:00–16:00 / 20:00–23:00',
+  en: '13:00–16:00 / 20:00–23:00'
+},
+'reservas.friSatHours': {
+  es: '13:00–16:30 / 20:00–23:30',
+  en: '13:00–16:30 / 20:00–23:30'
+},
+'reservas.sunHours': {
+  es: '13:00–16:30 / 20:00–23:00',
+  en: '13:00–16:30 / 20:00–23:00'
+},
+
+'carta.celiacGood': {
+  es: 'Apto para celíacos',
+  en: 'Gluten-free'
+},
+'carta.celiacWarn': {
+  es: 'Previa modificación, apto para celíacos',
+  en: 'Gluten-free with modification'
+},
+'carta.tabsLabel': {
+  es: 'Secciones de la carta',
+  en: 'Menu sections'
+},
+
+'trabaja.successMsg': {
+  es: '¡Gracias por tu interés! Hemos recibido tu solicitud y nos pondremos en contacto contigo pronto.',
+  en: 'Thank you for your interest! We have received your application and will be in touch soon.'
+},
+'trabaja.errNombre': {
+  es: 'El nombre es obligatorio.',
+  en: 'First name is required.'
+},
+'trabaja.errApellido': {
+  es: 'El apellido es obligatorio.',
+  en: 'Last name is required.'
+},
+'trabaja.errEmailReq': {
+  es: 'El email es obligatorio.',
+  en: 'Email is required.'
+},
+'trabaja.errEmailInv': {
+  es: 'Introduce un email válido.',
+  en: 'Please enter a valid email.'
+},
+'trabaja.errTelReq': {
+  es: 'El teléfono es obligatorio.',
+  en: 'Phone is required.'
+},
+'trabaja.errTelInv': {
+  es: 'Introduce un teléfono válido (mínimo 9 dígitos).',
+  en: 'Please enter a valid phone number (min. 9 digits).'
+},
+'trabaja.errMensaje': {
+  es: 'El mensaje es obligatorio.',
+  en: 'Message is required.'
+},
+'trabaja.errCvReq': {
+  es: 'Adjunta tu CV en PDF.',
+  en: 'Please attach your CV as a PDF.'
+},
+'trabaja.errCvType': {
+  es: 'Solo se permiten archivos PDF.',
+  en: 'Only PDF files are allowed.'
+},
+'trabaja.errPrivacy': {
+  es: 'Debes aceptar la política de privacidad.',
+  en: 'You must accept the privacy policy.'
+},
+
+'cookiesPage.tableOwn': {
+  es: 'Propia',
+  en: 'Own'
+},
+'cookiesPage.tableThird': {
+  es: 'Tercero — Google',
+  en: 'Third-party — Google'
+},
+'cookiesPage.tableTech': {
+  es: 'Técnica',
+  en: 'Technical'
+},
+'cookiesPage.tablePref': {
+  es: 'Técnica / Preferencia',
+  en: 'Technical / Preference'
+},
+'cookiesPage.tableAnalytics': {
+  es: 'Analítica',
+  en: 'Analytics'
+},
+'cookiesPage.tableSession': {
+  es: 'Sesión',
+  en: 'Session'
+},
+'cookiesPage.tableYear': {
+  es: '2 años',
+  en: '2 years'
+},
+'cookiesPage.tableDay': {
+  es: '1 día',
+  en: '1 day'
+},
+'cookiesPage.tableYearOne': {
+  es: '1 año',
+  en: '1 year'
+}
   };
 
   function getLang() {

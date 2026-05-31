@@ -173,6 +173,8 @@ import '../styles/navbar.css';
     localStorage.setItem(LANG_KEY, lang);
     document.documentElement.lang = lang;
     window.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
+    document.cookie = `lang=${lang}; path=/; max-age=31536000`;
+    window.location.reload();
   }
 
   function applyNavTranslations(lang: 'es' | 'en') {
