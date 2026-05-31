@@ -6,31 +6,31 @@ import "../styles/Footer.css";
 <footer style="font-family: var(--font-body); background: var(--color-surface); color: var(--color-text-primary);">
   <div class="footer-inner">
     <div class="footer-brand">
-      <p class="footer-tagline">Sabores del norte, alma madrileña.</p>
+      <p class="footer-tagline" data-i18n="footer.tagline">Sabores del norte, alma madrileña.</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/grancafe.santander/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.facebook.com/grancafesantander" target="_blank" rel="noopener noreferrer">Facebook</a>
       </div>
     </div>
     <div class="footer-contact">
-      <h3>Contacto</h3>
+      <h3 data-i18n="footer.contactTitle">Contacto</h3>
       <p>Plaza de Santa Bárbara, 4 · Madrid 28004</p>
       <p>Tel. 914 457 295</p>
-      <p>Mon–Fri 08:00–01:00 / Sat–Sun 09:00–01:00</p>
+      <p data-i18n="footer.hours">Lun–Vie 08:00–01:00 / Sáb–Dom 09:00–01:00</p>
     </div>
     <div class="footer-nav">
-      <h3>Trabaja con nosotros</h3>
-      <a href="/trabaja-con-nosotros">Enviar candidatura</a>
+      <h3 data-i18n="footer.joinTitle">Trabaja con nosotros</h3>
+      <a href="/trabaja-con-nosotros" data-i18n="footer.joinLink">Enviar candidatura</a>
     </div>
     <div class="footer-legal">
-      <h3>Legal</h3>
-      <a href="/aviso-legal">Aviso Legal</a>
-      <a href="/politica-de-privacidad">Política de Privacidad</a>
-      <a href="/politica-de-cookies">Política de Cookies</a>
+      <h3 data-i18n="footer.legalTitle">Legal</h3>
+      <a href="/aviso-legal" data-i18n="footer.avisoLegal">Aviso Legal</a>
+      <a href="/politica-de-privacidad" data-i18n="footer.privacidad">Política de Privacidad</a>
+      <a href="/politica-de-cookies" data-i18n="footer.cookies">Política de Cookies</a>
     </div>
   </div>
 
   <div class="footer-bottom">
-    © {currentYear} Gran Café Santander. Todos los derechos reservados.
+    © {currentYear} Gran Café Santander. <span data-i18n="footer.rights">Todos los derechos reservados.</span>
   </div>
 </footer>

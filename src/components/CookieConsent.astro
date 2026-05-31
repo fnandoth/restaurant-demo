@@ -11,19 +11,20 @@ import "../styles/CookieConsent.css";
     aria-labelledby="cookie-title"
     aria-describedby="cookie-description"
   >
-    <h2 id="cookie-title">Preferencias de cookies</h2>
+    <h2 id="cookie-title" data-i18n="cookie.title">Preferencias de cookies</h2>
     <p id="cookie-description">
-      Utilizamos cookies propias y de terceros para mejorar tu experiencia,
+      <span data-i18n="cookie.description">Utilizamos cookies propias y de terceros para mejorar tu experiencia,
       analizar el tráfico y personalizar contenidos. Puedes aceptar todas,
-      rechazarlas o configurar tus preferencias. Más información en nuestra
-      <a href="/politica-de-cookies">Política de Cookies</a>.
+      rechazarlas o configurar tus preferencias. Más información en nuestra</span>
+      {' '}
+      <a href="/politica-de-cookies" data-i18n="cookie.policyLink">Política de Cookies</a>.
     </p>
 
     <div class="cookie-actions">
-      <button class="cookie-button" type="button" data-action="accept"
+      <button class="cookie-button" type="button" data-action="accept" data-i18n="cookie.accept"
         >Aceptar todas</button
       >
-      <button class="cookie-button" type="button" data-action="reject"
+      <button class="cookie-button" type="button" data-action="reject" data-i18n="cookie.reject"
         >Rechazar</button
       >
       <button
@@ -32,6 +33,7 @@ import "../styles/CookieConsent.css";
         data-action="configure"
         aria-expanded="false"
         aria-controls="cookie-preferences-panel"
+        data-i18n="cookie.configure"
       >
         Configurar
       </button>
@@ -42,8 +44,8 @@ import "../styles/CookieConsent.css";
         <label>
           <input type="checkbox" checked disabled />
           <span>
-            Cookies técnicas / esenciales
-            <small>Necesarias para el funcionamiento del sitio.</small>
+            <span data-i18n="cookie.essential">Cookies técnicas / esenciales</span>
+            <small data-i18n="cookie.essentialNote">Necesarias para el funcionamiento del sitio.</small>
           </span>
         </label>
       </div>
@@ -51,8 +53,8 @@ import "../styles/CookieConsent.css";
         <label>
           <input id="cookie-analytics" type="checkbox" />
           <span>
-            Cookies analíticas
-            <small>Google Analytics (_ga, _gat, _gid).</small>
+            <span data-i18n="cookie.analytics">Cookies analíticas</span>
+            <small data-i18n="cookie.analyticsNote">Google Analytics (_ga, _gat, _gid).</small>
           </span>
         </label>
       </div>
@@ -60,12 +62,12 @@ import "../styles/CookieConsent.css";
         <label>
           <input id="cookie-preferences" type="checkbox" />
           <span>
-            Cookies de preferencias
-            <small>Recuerdan tus ajustes de navegación.</small>
+            <span data-i18n="cookie.preferences">Cookies de preferencias</span>
+            <small data-i18n="cookie.preferencesNote">Recuerdan tus ajustes de navegación.</small>
           </span>
         </label>
       </div>
-      <button class="cookie-button" type="button" data-action="save"
+      <button class="cookie-button" type="button" data-action="save" data-i18n="cookie.savePrefs"
         >Guardar preferencias</button
       >
     </div>

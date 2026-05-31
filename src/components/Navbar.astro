@@ -21,24 +21,36 @@ import '../styles/navbar.css';
 
     <div class="nav-links">
       <a href="/" class:list={{ "nav-link": true, "is-active": isActive("/") }}
-        >Inicio</a
+        data-i18n="nav.inicio">Inicio</a
       >
       <a
         href="/carta"
         class:list={{ "nav-link": true, "is-active": isActive("/carta") }}
-        >Carta</a
+        data-i18n="nav.carta">Carta</a
       >
       <a
         href="/reservas"
         class:list={{ "nav-link": true, "is-active": isActive("/reservas") }}
-        >Reservas</a
+        data-i18n="nav.reservas">Reservas</a
       >
       <a
         href="/contacto"
         class:list={{ "nav-link": true, "is-active": isActive("/contacto") }}
-        >Contacto</a
+        data-i18n="nav.contacto">Contacto</a
       >
-      <a href="/reservas" class="nav-cta">Reservar mesa</a>
+      <a href="/reservas" class="nav-cta" data-i18n="nav.reservarCta">Reservar mesa</a>
+
+      <!-- Language toggle -->
+      <button
+        id="lang-toggle"
+        class="lang-toggle"
+        aria-label="Switch language"
+        type="button"
+      >
+        <span class="lang-label lang-es">ES</span>
+        <span class="lang-separator">/</span>
+        <span class="lang-label lang-en">EN</span>
+      </button>
     </div>
 
     <details class="nav-details">
@@ -47,7 +59,7 @@ import '../styles/navbar.css';
         aria-label="Abrir menú"
         aria-expanded="false"
       >
-        <span>Menú</span>
+        <span data-i18n="nav.menuLabel">Menú</span>
         <span class="nav-burger" aria-hidden="true">
           <span></span>
           <span></span>
@@ -58,46 +70,160 @@ import '../styles/navbar.css';
         <a
           href="/"
           class:list={{ "nav-link": true, "is-active": isActive("/") }}
-          >Inicio</a
+          data-i18n="nav.inicio">Inicio</a
         >
         <a
           href="/carta"
           class:list={{ "nav-link": true, "is-active": isActive("/carta") }}
-          >Carta</a
+          data-i18n="nav.carta">Carta</a
         >
         <a
           href="/reservas"
           class:list={{ "nav-link": true, "is-active": isActive("/reservas") }}
-          >Reservas</a
+          data-i18n="nav.reservas">Reservas</a
         >
         <a
           href="/contacto"
           class:list={{ "nav-link": true, "is-active": isActive("/contacto") }}
-          >Contacto</a
+          data-i18n="nav.contacto">Contacto</a
         >
-        <a href="/reservas" class="nav-cta">Reservar mesa</a>
+        <a href="/reservas" class="nav-cta" data-i18n="nav.reservarCta">Reservar mesa</a>
+
+        <!-- Language toggle (mobile) -->
+        <button
+          class="lang-toggle lang-toggle-mobile"
+          aria-label="Switch language"
+          type="button"
+          data-lang-mobile
+        >
+          <span class="lang-label lang-es">ES</span>
+          <span class="lang-separator">/</span>
+          <span class="lang-label lang-en">EN</span>
+        </button>
       </div>
     </details>
   </div>
 </nav>
 
+<style>
+  .lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    background: none;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+    padding: 3px 8px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.75;
+    transition: opacity 0.2s ease, background 0.2s ease;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .lang-toggle:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .lang-separator {
+    opacity: 0.4;
+    margin: 0 1px;
+  }
+  .lang-label {
+    font-weight: 500;
+    transition: opacity 0.2s, font-weight 0.2s;
+  }
+  /* active language is brighter */
+  .lang-toggle.lang-es-active .lang-es,
+  .lang-toggle.lang-en-active .lang-en {
+    opacity: 1;
+    font-weight: 700;
+  }
+  .lang-toggle.lang-es-active .lang-en,
+  .lang-toggle.lang-en-active .lang-es {
+    opacity: 0.45;
+  }
+  .lang-toggle-mobile {
+    margin-top: 8px;
+    align-self: flex-start;
+  }
+</style>
+
 <script>
-  const nav = document.querySelector(".site-nav");
-  const details = document.querySelector(".nav-details");
-  const summary = details?.querySelector("summary");
+  const LANG_KEY = 'gcs_lang';
+
+  const T: Record<string, { es: string; en: string }> = {
+    'nav.inicio':       { es: 'Inicio',        en: 'Home' },
+    'nav.carta':        { es: 'Carta',         en: 'Menu' },
+    'nav.reservas':     { es: 'Reservas',      en: 'Reservations' },
+    'nav.contacto':     { es: 'Contacto',      en: 'Contact' },
+    'nav.reservarCta':  { es: 'Reservar mesa', en: 'Book a table' },
+    'nav.menuLabel':    { es: 'Menú',          en: 'Menu' },
+  };
+
+  function getLang(): 'es' | 'en' {
+    const stored = localStorage.getItem(LANG_KEY);
+    return stored === 'en' ? 'en' : 'es';
+  }
+
+  function setLang(lang: 'es' | 'en') {
+    localStorage.setItem(LANG_KEY, lang);
+    document.documentElement.lang = lang;
+    window.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
+  }
+
+  function applyNavTranslations(lang: 'es' | 'en') {
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const key = (el as HTMLElement).dataset.i18n;
+      if (key && T[key]) {
+        el.textContent = T[key][lang];
+      }
+    });
+    document.querySelectorAll('.lang-toggle').forEach((btn) => {
+      btn.classList.toggle('lang-es-active', lang === 'es');
+      btn.classList.toggle('lang-en-active', lang === 'en');
+    });
+    const summary = document.querySelector('.nav-summary');
+    if (summary) summary.setAttribute('aria-label', lang === 'es' ? 'Abrir menú' : 'Open menu');
+  }
+
+  function toggleLang() {
+    const next = getLang() === 'es' ? 'en' : 'es';
+    setLang(next);
+  }
+
+  const currentLang = getLang();
+  document.documentElement.lang = currentLang;
+  applyNavTranslations(currentLang);
+
+  document.querySelectorAll('#lang-toggle, [data-lang-mobile]').forEach((btn) => {
+    btn.addEventListener('click', toggleLang);
+  });
+
+  window.addEventListener('langchange', (e) => {
+    const lang = (e as CustomEvent).detail.lang as 'es' | 'en';
+    applyNavTranslations(lang);
+  });
+
+  const nav = document.querySelector('.site-nav');
+  const details = document.querySelector('.nav-details');
+  const summary = details?.querySelector('summary');
   const threshold = 8;
   const setState = () => {
     if (!nav) return;
     const scrolled = window.scrollY > threshold;
-    nav.classList.toggle("scrolled", scrolled);
+    nav.classList.toggle('scrolled', scrolled);
   };
   const setExpanded = () => {
     if (!details || !summary) return;
-    summary.setAttribute("aria-expanded", details.open ? "true" : "false");
+    summary.setAttribute('aria-expanded', details.open ? 'true' : 'false');
   };
   setState();
   setExpanded();
-  window.addEventListener("scroll", setState, { passive: true });
-  window.addEventListener("resize", setState, { passive: true });
-  details?.addEventListener("toggle", setExpanded);
+  window.addEventListener('scroll', setState, { passive: true });
+  window.addEventListener('resize', setState, { passive: true });
+  details?.addEventListener('toggle', setExpanded);
 </script>

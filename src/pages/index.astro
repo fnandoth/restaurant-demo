@@ -59,7 +59,7 @@ const dishes = [
     />
     <div class="absolute inset-0" style="background: rgba(28, 20, 16, 0.45);"></div>
     <div class="relative z-10 mx-auto w-full px-6" style="max-width: var(--container-max);">
-      <p class="text-sm uppercase tracking-[0.24em]" style="color: var(--color-brand-light);">
+      <p class="text-sm uppercase tracking-[0.24em]" style="color: var(--color-brand-light);" data-i18n="index.heroBadge">
         Desde 1967 · Madrid
       </p>
       <h1
@@ -68,7 +68,7 @@ const dishes = [
       >
         Gran Café Santander
       </h1>
-      <p class="mt-4 max-w-2xl text-lg font-light md:text-xl" style="color: rgba(255, 255, 255, 0.85);">
+      <p class="mt-4 max-w-2xl text-lg font-light md:text-xl" style="color: rgba(255, 255, 255, 0.85);" data-i18n="index.heroSubtitle">
         Cocina cántabra con alma madrileña, sabores del norte en un salón que invita a quedarse.
       </p>
       <div class="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -76,6 +76,7 @@ const dishes = [
           href="/carta"
           class="inline-flex items-center justify-center px-8 py-3 text-sm uppercase tracking-[0.18em] transition duration-300 ease-out hover:opacity-90"
           style="background: var(--color-surface); color: var(--color-brand-dark);"
+          data-i18n="index.heroCarta"
         >
           Ver la carta
         </a>
@@ -83,6 +84,7 @@ const dishes = [
           href="/reservas"
           class="inline-flex items-center justify-center px-8 py-3 text-sm uppercase tracking-[0.18em] text-white transition duration-300 ease-out hover:opacity-90"
           style="border: 1px solid var(--color-surface);"
+          data-i18n="index.heroReserva"
         >
           Reservar mesa
         </a>
@@ -116,17 +118,17 @@ const dishes = [
         />
       </div>
       <div class="flex flex-col justify-center">
-        <p class="text-sm uppercase tracking-[0.2em]" style="color: var(--color-brand);">Nuestra historia</p>
-        <h2 class="mt-4 text-3xl md:text-4xl" style="font-family: var(--font-display);">
+        <p class="text-sm uppercase tracking-[0.2em]" style="color: var(--color-brand);" data-i18n="index.conceptoEyebrow">Nuestra historia</p>
+        <h2 class="mt-4 text-3xl md:text-4xl" style="font-family: var(--font-display);" data-i18n="index.conceptoTitle">
           El sabor de Cantabria en el corazón de Madrid
         </h2>
-        <p class="mt-4 text-base leading-relaxed" style="color: var(--color-text-muted);">
+        <p class="mt-4 text-base leading-relaxed" style="color: var(--color-text-muted);" data-i18n="index.conceptoP1">
           Gran Café Santander ocupa un lugar con más de medio siglo de historia en la ciudad. Heredero de la emblemática Cafetería Santander, abierta en 1967, conserva el espíritu acogedor que convirtió este espacio en un punto de encuentro para generaciones de madrileños.
         </p>
-        <p class="mt-3 text-base leading-relaxed" style="color: var(--color-text-muted);">
+        <p class="mt-3 text-base leading-relaxed" style="color: var(--color-text-muted);" data-i18n="index.conceptoP2">
           Nuestra cocina apuesta por el producto de calidad, las recetas honestas y los sabores que han definido la gastronomía cántabra, todo ello en un ambiente cálido y contemporáneo.
         </p>
-        <p class="mt-3 text-base leading-relaxed" style="color: var(--color-text-muted);">
+        <p class="mt-3 text-base leading-relaxed" style="color: var(--color-text-muted);" data-i18n="index.conceptoP3">
           Un lugar para desayunar, compartir una comida especial o disfrutar de los pequeños rituales de cada día.
         </p>
         <span class="mt-6 h-px w-16" style="background: var(--color-brand-light);"></span>
@@ -136,11 +138,11 @@ const dishes = [
 
     <section id="platos" style="background: var(--color-surface-alt); padding-block: var(--section-padding-y);">
     <div class="mx-auto px-6 text-center" style="max-width: var(--container-max);">
-      <p class="text-sm uppercase tracking-[0.2em]" style="color: var(--color-brand);">Recomendados</p>
-      <h2 class="mt-3 text-3xl md:text-4xl" style="font-family: var(--font-display);">
+      <p class="text-sm uppercase tracking-[0.2em]" style="color: var(--color-brand);" data-i18n="index.recomEyebrow">Recomendados</p>
+      <h2 class="mt-3 text-3xl md:text-4xl" style="font-family: var(--font-display);" data-i18n="index.recomTitle">
         Una selección de nuestra carta
       </h2>
-      <p class="mt-3 text-base text-[color:var(--color-text-muted)]">
+      <p class="mt-3 text-base text-[color:var(--color-text-muted)]" data-i18n="index.recomSubtitle">
         Cocina tradicional cantabresa con producto de temporada
       </p>
 
@@ -175,6 +177,7 @@ const dishes = [
         href="/carta"
         class="mt-10 inline-flex items-center justify-center text-sm uppercase tracking-[0.18em] transition duration-300 ease-out hover:opacity-80"
         style="color: var(--color-brand);"
+        data-i18n="index.recomVerCarta"
       >
         Ver carta completa
       </a>
@@ -197,30 +200,31 @@ const dishes = [
     <h2 class="sr-only">Horario y ubicación</h2>
     <div class="mx-auto grid gap-8 px-6 md:grid-cols-2" style="max-width: var(--container-max);">
       <div class="border p-6" style="border-color: var(--color-warm-gray); background: var(--color-surface);">
-        <h3 class="text-2xl" style="font-family: var(--font-display);">Horario</h3>
+        <h3 class="text-2xl" style="font-family: var(--font-display);" data-i18n="index.horarioTitle">Horario</h3>
         <div class="mt-4 space-y-3" style="color: var(--color-text-muted);">
           <div>
-            <p class="text-sm uppercase tracking-[0.18em]" style="color: var(--color-brand);">Local</p>
-            <p>Lun-Vie 08:00-01:00</p>
-            <p>Sáb, Dom y Festivo 09:00-01:00</p>
+            <p class="text-sm uppercase tracking-[0.18em]" style="color: var(--color-brand);" data-i18n="index.horarioLocal">Local</p>
+            <p data-i18n="index.horarioLocalP1">Lun-Vie 08:00-01:00</p>
+            <p data-i18n="index.horarioLocalP2">Sáb, Dom y Festivo 09:00-01:00</p>
           </div>
           <div>
-            <p class="text-sm uppercase tracking-[0.18em]" style="color: var(--color-brand);">Cocina</p>
-            <p>Lun-Jue 13:00-16:00 / 20:00-23:00</p>
-            <p>Vie-Sáb 13:00-16:30 / 20:00-23:30</p>
-            <p>Dom 13:00-16:30 / 20:00-23:00</p>
+            <p class="text-sm uppercase tracking-[0.18em]" style="color: var(--color-brand);" data-i18n="index.horarioCocina">Cocina</p>
+            <p data-i18n="index.horarioCocinaP1">Lun-Jue 13:00-16:00 / 20:00-23:00</p>
+            <p data-i18n="index.horarioCocinaP2">Vie-Sáb 13:00-16:30 / 20:00-23:30</p>
+            <p data-i18n="index.horarioCocinaP3">Dom 13:00-16:30 / 20:00-23:00</p>
           </div>
         </div>
       </div>
 
       <div class="border p-6" style="border-color: var(--color-warm-gray); background: var(--color-surface);">
-        <h3 class="text-2xl" style="font-family: var(--font-display);">Ubicación</h3>
+        <h3 class="text-2xl" style="font-family: var(--font-display);" data-i18n="index.ubicacionTitle">Ubicación</h3>
         <p class="mt-4" style="color: var(--color-text-muted);">Plaza de Santa Bárbara, 4 · Madrid 28004</p>
         <p style="color: var(--color-text-muted);">Tel. 914 457 295</p>
         <a
           href="/contacto"
           class="mt-4 inline-flex items-center text-sm uppercase tracking-[0.18em] transition duration-300 ease-out hover:opacity-80"
           style="color: var(--color-brand);"
+          data-i18n="index.ubicacionCta"
         >
           Cómo llegar
         </a>
@@ -253,16 +257,17 @@ const dishes = [
       style="opacity: 0.15;"
     />
     <div class="relative z-10 mx-auto flex flex-col items-start gap-4 px-6 text-left" style="max-width: var(--container-max);">
-      <h2 class="text-3xl md:text-4xl" style="font-family: var(--font-display);">
+      <h2 class="text-3xl md:text-4xl" style="font-family: var(--font-display);" data-i18n="index.ctaTitle">
         ¿Tienes una ocasión especial?
       </h2>
-      <p class="max-w-xl text-base text-white/85">
+      <p class="max-w-xl text-base text-white/85" data-i18n="index.ctaSubtitle">
         Reserva tu mesa y deja que nuestro equipo prepare una experiencia a la altura de tu celebración.
       </p>
       <a
         href="/reservas"
         class="inline-flex items-center justify-center px-8 py-3 text-sm uppercase tracking-[0.18em] transition duration-300 ease-out hover:opacity-90"
         style="background: var(--color-surface); color: var(--color-brand-dark);"
+        data-i18n="index.ctaButton"
       >
         Reservar mesa
       </a>
