@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/politica-de-privacidad.css';
 ---
 
 <BaseLayout
@@ -221,87 +222,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </article>
     </div>
   </section>
-
-  <style>
-    .policy-hero {
-      background: var(--color-surface-alt);
-      padding: 3.5rem 0;
-    }
-
-    .policy-hero-inner {
-      max-width: var(--container-max);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    .policy-eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      font-size: 0.8rem;
-      color: var(--color-brand);
-      margin-bottom: 0.75rem;
-    }
-
-    .policy-hero h1 {
-      font-family: var(--font-display);
-      font-size: 2.6rem;
-      margin-bottom: 0.75rem;
-      color: var(--color-text-primary);
-    }
-
-    .policy-subtitle {
-      color: var(--color-text-muted);
-      max-width: 720px;
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    .policy-content {
-      background: var(--color-cream);
-      padding: var(--section-padding-y) 0;
-    }
-
-    .policy-container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      display: grid;
-      gap: 2.5rem;
-    }
-
-    .policy-block h2 {
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .policy-block p {
-      color: var(--color-text-muted);
-      line-height: 1.7;
-      margin: 0 0 1rem;
-    }
-
-    .policy-block p:last-child {
-      margin-bottom: 0;
-    }
-
-    .policy-block ul {
-      margin: 0 0 1rem 1.25rem;
-      padding: 0;
-      color: var(--color-text-muted);
-      display: grid;
-      gap: 0.5rem;
-      line-height: 1.7;
-    }
-
-    @media (min-width: 768px) {
-      .policy-hero {
-        padding: 4.5rem 0;
-      }
-
-      .policy-hero h1 {
-        font-size: 3rem;
-      }
-    }
-  </style>
 </BaseLayout>

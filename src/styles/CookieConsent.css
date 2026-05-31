@@ -1,0 +1,125 @@
+.cookie-consent {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 200;
+}
+
+.cookie-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(28, 20, 16, 0.55);
+}
+
+.cookie-dialog {
+    position: relative;
+    z-index: 1;
+    width: min(640px, 100%);
+    background: var(--color-surface);
+    border: 1px solid var(--color-warm-gray);
+    border-radius: 6px;
+    padding: 1.75rem;
+    box-shadow: 0 20px 50px rgba(28, 20, 16, 0.25);
+    font-family: var(--font-body);
+    color: var(--color-text-primary);
+}
+
+.cookie-dialog h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+}
+
+.cookie-dialog p {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin: 0 0 1.25rem;
+}
+
+.cookie-dialog a {
+    color: var(--color-brand);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cookie-dialog a:hover {
+    color: var(--color-brand-dark);
+}
+
+.cookie-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.cookie-button {
+    border: 1px solid var(--color-brand);
+    background: transparent;
+    color: var(--color-brand-dark);
+    padding: 0.65rem 1.4rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    cursor: pointer;
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+.cookie-button:hover {
+    background: var(--color-brand);
+    color: var(--color-surface);
+}
+
+.cookie-link {
+    background: none;
+    border: none;
+    color: var(--color-brand);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.35rem 0.25rem;
+}
+
+.cookie-link:hover {
+    color: var(--color-brand-dark);
+}
+
+.cookie-preferences {
+    margin-top: 1.25rem;
+    border-top: 1px solid var(--color-warm-gray);
+    padding-top: 1rem;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.cookie-option label {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    color: var(--color-text-primary);
+}
+
+.cookie-option small {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+}
+
+@media (max-width: 640px) {
+    .cookie-dialog {
+        padding: 1.5rem;
+    }
+
+    .cookie-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cookie-button {
+        width: 100%;
+        text-align: center;
+    }
+}
