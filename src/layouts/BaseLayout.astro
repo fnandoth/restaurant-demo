@@ -57,7 +57,6 @@ const jsonLd = {
     <meta name="description" content={description} />
     <meta name="theme-color" content="#8B6347" />
     <link rel="icon" href="/assets/mini-logotipo.png" />
-    <link rel="preload" as="image" href="/assets/restaurante-centrado.jpg" />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -74,7 +73,23 @@ const jsonLd = {
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+      />
+    </noscript>
 
     <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     <slot name="head" />

@@ -1,10 +1,29 @@
 ---
+import { Image, getImage } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import menuData from '../data/menu.json';
 import desayunoData from '../data/desayuno.json';
+import heroImage from '../assets/hero/restaurante-interior-clientes-patio.jpg';
 
 const menuCategories = menuData.menu ?? [];
 const desayunoCategories = desayunoData.menu ?? [];
+
+const heroOptimized = await getImage({
+  src: heroImage,
+  widths: [480, 768, 1024, 1280, 1600],
+  format: 'webp',
+  quality: 70,
+  sizes: '100vw'
+});
+const heroPreloadSrc = heroOptimized.src;
+
+const menuImageModules = import.meta.glob('../assets/menu/*.jpg', { eager: true });
+const menuImages = Object.fromEntries(
+  Object.entries(menuImageModules).flatMap(([path, module]) => {
+    const fileName = path.split('/').pop();
+    return fileName ? [[fileName, module.default]] : [];
+  })
+);
 
 const slugify = (value: string) =>
   `cat-${value
@@ -18,268 +37,373 @@ const slugify = (value: string) =>
 const imageMap = [
   {
     match: 'Anchoas con brioche',
-    src: '/assets/restaurante-comida-anchoas-con-brioche.jpg',
+    file: 'restaurante-comida-anchoas-con-brioche.jpg',
     alt: 'Anchoas con brioche y mantequilla'
   },
   {
     match: 'La Maruca',
-    src: '/assets/restaurante-comida-la-maruca.jpg',
+    file: 'restaurante-comida-la-maruca.jpg',
     alt: 'Ensaladilla rusa La Maruca'
   },
   {
     match: 'Ensalada de jamón',
-    src: '/assets/restaurante-comida-jamon-con-virutas.jpg',
+    file: 'restaurante-comida-jamon-con-virutas.jpg',
     alt: 'Ensalada de jamón con virutas de foie'
   },
   {
     match: 'Ensalada de tomates',
-    src: '/assets/restaurante-comida-Ensalada-de-tomates-cherry-con-queso-Jaradilla.jpg',
+    file: 'restaurante-comida-Ensalada-de-tomates-cherry-con-queso-Jaradilla.jpg',
     alt: 'Ensalada de tomates cherry con queso Jaradilla'
   },
   {
     match: 'Ensalada verde',
-    src: '/assets/restaurante-comida-ensalada-verde.jpg',
+    file: 'restaurante-comida-ensalada-verde.jpg',
     alt: 'Ensalada verde saludable'
   },
   {
     match: 'Nigiris variados',
-    src: '/assets/restaurante-comida-nigiris.jpg',
+    file: 'restaurante-comida-nigiris.jpg',
     alt: 'Nigiris variados de la carta de Gran Café Santander'
   },
   {
     match: 'Pastel de queso y trufa',
-    src: '/assets/restaurante-Pastel-de-queso-y-trufa.jpg',
+    file: 'restaurante-Pastel-de-queso-y-trufa.jpg',
     alt: 'Pastel de queso y trufa de Gran Café Santander'
   },
   {
     match: 'Puding de mejillones',
-    src: '/assets/restaurante-comida-pudin-de-mejillones.jpg',
+    file: 'restaurante-comida-pudin-de-mejillones.jpg',
     alt: 'Pudin de mejillones en escabeche'
   },
   {
     match: 'Tartar de aguacate',
-    src: '/assets/restaurante-comida-tartar-salmon.jpg',
+    file: 'restaurante-comida-tartar-salmon.jpg',
     alt: 'Tartar de aguacate y salmón ahumado'
   },
   {
     match: 'Tartar de bonito',
-    src: '/assets/restaurante-comida-tartar-de-bonito.jpg',
+    file: 'restaurante-comida-tartar-de-bonito.jpg',
     alt: 'Tartar de bonito de la carta'
   },
   {
     match: 'Carpaccio de lomo',
-    src: '/assets/restaurante-comida-carpaccio.jpg',
+    file: 'restaurante-comida-carpaccio.jpg',
     alt: 'Carpaccio de lomo de vaca con patatas y pimientos'
   },
   {
     match: 'Croquetas de lacón',
-    src: '/assets/restaurante-comida-croquetas.jpg',
+    file: 'restaurante-comida-croquetas.jpg',
     alt: 'Croquetas de lacón y huevo cocido'
   },
   {
     match: 'Patatas bravas',
-    src: '/assets/restaurante-comida-patatas.jpg',
+    file: 'restaurante-comida-patatas.jpg',
     alt: 'Patatas bravas'
   },
   {
     match: 'Empanadillas de bonito',
-    src: '/assets/restaurante-comida-Empanadillas.jpg',
+    file: 'restaurante-comida-Empanadillas.jpg',
     alt: 'Empanadillas de bonito como las de Angélica'
   },
   {
     match: 'Rabas de calamar',
-    src: '/assets/restaurante-comida-Rabas-de-calamar.jpg',
+    file: 'restaurante-comida-Rabas-de-calamar.jpg',
     alt: 'Rabas de calamar al estilo Santander'
   },
   {
     match: 'Buñuelos de bacalao',
-    src: '/assets/restaurante-comida-Buñuelos.jpg',
+    file: 'restaurante-comida-Buñuelos.jpg',
     alt: 'Buñuelos de bacalao de la Maruca'
   },
   {
     match: 'Trozucos',
-    src: '/assets/restaurante-comida-Trozucos.jpg',
+    file: 'restaurante-comida-Trozucos.jpg',
     alt: 'Trozucos de merluza orly'
   },
   {
     match: 'Mejillones en salsa roja',
-    src: '/assets/restaurante-comida-Mejillones-roja.jpg',
+    file: 'restaurante-comida-Mejillones-roja.jpg',
     alt: 'Mejillones en salsa roja con toque picante'
   },
   {
     match: 'Landa',
-    src: '/assets/restaurante-comida-landa.jpg',
+    file: 'restaurante-comida-landa.jpg',
     alt: 'Parada en Landa con huevos y morcilla'
   },
   {
     match: 'Menestras de verduras',
-    src: '/assets/restaurante-comida-Menestras-de-verduras-salteadas.jpg',
+    file: 'restaurante-comida-Menestras-de-verduras-salteadas.jpg',
     alt: 'Menestras de verduras salteadas'
   },
   {
     match: 'Alcachofas en salsa verde',
-    src: '/assets/restaurante-comida-Alcachofas-verde.jpg',
+    file: 'restaurante-comida-Alcachofas-verde.jpg',
     alt: 'Alcachofas en salsa verde con cocochas'
   },
   {
     match: 'Pencas',
-    src: '/assets/restaurante-comida-Pencas.jpg',
+    file: 'restaurante-comida-Pencas.jpg',
     alt: 'Pencas a la importancia con mejillones y langostinos'
   },
   {
     match: 'Lasaña boloñesa',
-    src: '/assets/restaurante-comida-Lasaña.jpg',
+    file: 'restaurante-comida-Lasaña.jpg',
     alt: 'Lasaña boloñesa con crujiente de parmesano'
   },
   {
     match: 'Linguine a la marinera',
-    src: '/assets/restaurante-comida-Linguine.jpg',
+    file: 'restaurante-comida-Linguine.jpg',
     alt: 'Linguine a la marinera'
   },
   {
     match: 'Macarrones sin gluten',
-    src: '/assets/restaurante-comida-Macarrones-sin-gluten.jpg',
+    file: 'restaurante-comida-Macarrones-sin-gluten.jpg',
     alt: 'Macarrones sin gluten de bonito del norte con tomate'
   },
   {
     match: 'Puntalete',
-    src: '/assets/restaurante-comida-Puntalete.jpg',
+    file: 'restaurante-comida-Puntalete.jpg',
     alt: 'Puntalete tratado como un rissoto'
   },
   {
     match: 'Arroz negro',
-    src: '/assets/restaurante-comida-Arroz-negro.jpg',
+    file: 'restaurante-comida-Arroz-negro.jpg',
     alt: 'Arroz negro con cachón'
   },
   {
     match: 'Arroz con verduras y setas',
-    src: '/assets/restaurante-comida-Arroz-setas.jpg',
+    file: 'restaurante-comida-Arroz-setas.jpg',
     alt: 'Arroz con verduras y setas'
   },
   {
     match: 'Rula',
-    src: '/assets/restaurante-comida-Rula-merluza.jpg',
+    file: 'restaurante-comida-Rula-merluza.jpg',
     alt: 'Merluza de Rula rebozada con ajillo y langostinos'
   },
   {
     match: 'Merluza de anzuelo',
-    src: '/assets/restaurante-comida-Merluza.jpg',
+    file: 'restaurante-comida-Merluza.jpg',
     alt: 'Merluza de anzuelo a la plancha con patatas panadera'
   },
   {
     match: 'Merluza a la romana',
-    src: '/assets/restaurante-comida-Merluza-romana.jpg',
+    file: 'restaurante-comida-Merluza-romana.jpg',
     alt: 'Merluza a la romana con pimientos verdes'
   },
   {
     match: 'Chipirones',
-    src: '/assets/restaurante-comida-Chipirones.jpg',
+    file: 'restaurante-comida-Chipirones.jpg',
     alt: 'Chipirones encebollados'
   },
   {
     match: 'Hamburguesa de bonito',
-    src: '/assets/restaurante-comida-bonito-ham.jpg',
+    file: 'restaurante-comida-bonito-ham.jpg',
     alt: 'Hamburguesa de bonito'
   },
   {
     match: 'Hamburguesa de ternera',
-    src: '/assets/restaurante-comida-Hamburguesa-ternera.jpg',
+    file: 'restaurante-comida-Hamburguesa-ternera.jpg',
     alt: 'Hamburguesa de ternera'
   },
   {
     match: 'Filetes rusos',
-    src: '/assets/restaurante-comida-filete-ruso.jpg',
+    file: 'restaurante-comida-filete-ruso.jpg',
     alt: 'Filetes rusos con foie'
   },
   {
     match: 'Cordero deshuesado',
-    src: '/assets/restaurante-comida-Cordero-deshuesado.jpg',
+    file: 'restaurante-comida-Cordero-deshuesado.jpg',
     alt: 'Cordero deshuesado con patatas panadera'
   },
   {
     match: 'San jacobo',
-    src: '/assets/restaurante-comida-San-jacobo.jpg',
+    file: 'restaurante-comida-San-jacobo.jpg',
     alt: 'San jacobo de lomo de potes'
   },
   {
     match: 'Steak tartar',
-    src: '/assets/restaurante-comida-Steak-tartar.jpg',
+    file: 'restaurante-comida-Steak-tartar.jpg',
     alt: 'Steak tartar'
   },
   {
     match: 'Solomillo de cerdo ibérico',
-    src: '/assets/restaurante-comida-Solomillo.jpg',
+    file: 'restaurante-comida-Solomillo.jpg',
     alt: 'Solomillo de cerdo ibérico al queso de cabrales'
   },
   {
     match: 'Callos a la montañesa',
-    src: '/assets/restaurante-comida-Callos.jpg',
+    file: 'restaurante-comida-Callos.jpg',
     alt: 'Callos a la montañesa'
   },
   {
     match: 'Pluma ibérica',
-    src: '/assets/restaurante-comida-pluma.jpg',
+    file: 'restaurante-comida-pluma.jpg',
     alt: 'Pluma ibérica con chimichurri'
   },
   {
     match: 'Pan blanco',
-    src: '/assets/restaurante-comida-pan-blanco.jpg',
+    file: 'restaurante-comida-pan-blanco.jpg',
     alt: 'Pan blanco'
   },
   {
     match: 'Pan de semillas',
-    src: '/assets/restaurante-comida-pan-semillas.jpg',
+    file: 'restaurante-comida-pan-semillas.jpg',
     alt: 'Pan de semillas'
   },
   {
     match: 'Cocktail de melón',
-    src: '/assets/restaurante-comida-cocktail-melon.jpg',
+    file: 'restaurante-comida-cocktail-melon.jpg',
     alt: 'Cocktail de melón'
   },
   {
     match: 'Flan con nata',
-    src: '/assets/restaurante-comida-flan-nata.jpg',
+    file: 'restaurante-comida-flan-nata.jpg',
     alt: 'Flan con nata'
   },
   {
     match: 'Tarta de chocolate',
-    src: '/assets/restaurante-comida-tarta-chocolate.jpg',
+    file: 'restaurante-comida-tarta-chocolate.jpg',
     alt: 'Tarta de chocolate'
   },
   {
     match: 'Fresa rellena',
-    src: '/assets/restaurante-comida-fresa.jpg',
+    file: 'restaurante-comida-fresa.jpg',
     alt: 'Fresa rellena de chocolate blanco'
   },
   {
     match: 'Tarta de Queso de Cañadío',
-    src: '/assets/restaurante-comida-tarta-queso.jpg',
+    file: 'restaurante-comida-tarta-queso.jpg',
     alt: 'Tarta de queso de Cañadío'
   },
   {
+    match: 'Croissant de mantequilla',
+    file: 'restaurante-desayuno-Croissant-mantequilla.jpg',
+    alt: 'Croissant de mantequilla'
+  },
+  {
+    match: 'Croissant vegetal',
+    file: 'restaurante-desayuno-Croissant-vegetal.jpg',
+    alt: 'Croissant vegetal'
+  },
+  {
+    match: 'Sobaos pasiegos',
+    file: 'restaurante-desayuno-Sobaos-pasiegos.jpg',
+    alt: 'Sobaos pasiegos de la Vega del Pas'
+  },
+  {
+    match: 'Corbatas de Unquera',
+    file: 'restaurante-desayuno-corbata-unquera.jpg',
+    alt: 'Corbatas de Unquera'
+  },
+  {
+    match: 'Magdalenas caseras de Unquera',
+    file: 'restaurante-desayuno-Magdalenas-Unquera.jpg',
+    alt: 'Magdalenas caseras de Unquera'
+  },
+  {
+    match: 'Zumo de naranja',
+    file: 'restaurante-desayuno-zumo.jpg',
+    alt: 'Zumo de naranja natural'
+  },
+  {
+    match: 'Fruta variada',
+    file: 'restaurante-desayuno-Fruta-variada.jpg',
+    alt: 'Fruta variada'
+  },
+  {
+    match: 'Bollo de mantequilla',
+    file: 'restaurante-desayuno-Bollo-mantequilla.jpg',
+    alt: 'Bollo de mantequilla'
+  },
+  {
+    match: 'Bizcocho casero de zanahoria',
+    file: 'restaurante-desayuno-Bizcocho-zanahoria.jpg',
+    alt: 'Bizcocho casero de zanahoria'
+  },
+  {
+    match: 'Bizcocho casero de yogur y limón',
+    file: 'restaurante-desayuno-Bizcocho-limón.jpg',
+    alt: 'Bizcocho casero de yogur y limón'
+  },
+  {
+    match: 'Yogurt Natural',
+    file: 'restaurante-desayuno-Yogurt-muesli.jpg',
+    alt: 'Yogurt natural con muesli'
+  },
+  {
+    match: 'Trenza de hojaldre',
+    file: 'restaurante-desayuno-Trenza-hojaldre.jpg',
+    alt: 'Trenza de hojaldre'
+  },
+  {
+    match: 'Quesada Pasiega',
+    file: 'restaurante-desayuno-Quesada-Pasiega.jpg',
+    alt: 'Quesada pasiega'
+  },
+  {
+    match: 'Sandwich mixto',
+    file: 'restaurante-desayuno-Sandwich-mixto.jpg',
+    alt: 'Sandwich mixto'
+  },
+  {
+    match: 'Sandwich de pavo',
+    file: 'restaurante-desayuno-Sandwich-pavo.jpg',
+    alt: 'Sandwich de pavo'
+  },
+  {
+    match: 'Bagel con salmón',
+    file: 'restaurante-desayuno-Bagel-salmón-ahumado.jpg',
+    alt: 'Bagel con salmón ahumado y queso crema'
+  },
+  {
+    match: 'Tosta de jamón Ibérico',
+    file: 'restaurante-desayuno-Tosta-jamón-Ibérico.jpg',
+    alt: 'Tosta de jamón Ibérico'
+  },
+  {
+    match: 'Tosta de aguacate y tomate',
+    file: 'restaurante-desayuno-Tosta-aguacate-tomate.jpg',
+    alt: 'Tosta de aguacate y tomate'
+  },
+  {
+    match: 'Sandwich california',
+    file: 'restaurante-desayuno-Sandwich-california.jpg',
+    alt: 'Sandwich california'
+  },
+  {
+    match: 'Sandwich "La Madrid"',
+    file: 'restaurante-desayuno-Sandwich-madrid.jpg',
+    alt: 'Sandwich La Madrid'
+  },
+  {
     match: 'Pincho tortilla',
-    src: '/assets/restaurante-pincho-de-tortilla.jpg',
-    alt: 'Pincho de tortilla casera'
+    file: 'restaurante-desayuno-pincho-tortilla.jpg',
+    alt: 'Pincho de tortilla'
   },
   {
     match: 'Pincho de tortilla',
-    src: '/assets/restaurante-pincho-de-tortilla.jpg',
+    file: 'restaurante-desayuno-pincho-tortilla.jpg',
     alt: 'Pincho de tortilla con bonito'
   },
   {
     match: 'Donuts',
-    src: '/assets/restaurante-comida-donut.jpg',
+    file: 'restaurante-comida-donut.jpg',
     alt: 'Donuts del Gran Café Santander'
   },
   {
     match: 'Desayuno',
-    src: '/assets/restaurante-desayuno-frio.jpg',
+    file: 'restaurante-desayuno-frio.jpg',
     alt: 'Desayuno en Gran Café Santander Madrid'
   }
 ];
 
-const getDishAsset = (name: string) =>
-  imageMap.find((entry) => name.toLowerCase().includes(entry.match.toLowerCase())) ?? null;
+const getDishAsset = (name: string) => {
+  const entry = imageMap.find((item) => name.toLowerCase().includes(item.match.toLowerCase()));
+  if (!entry) return null;
+  const src = menuImages[entry.file];
+  if (src) return { src, alt: entry.alt, optimized: true };
+  return { src: `/assets/${entry.file}`, alt: entry.alt, optimized: false };
+};
 
 const getCeliacBadge = (status: string) => {
   if (!status) return null;
@@ -313,6 +437,12 @@ const menuSchema = {
   description="Consulta la carta completa de Gran Café Santander en Madrid: entrantes, pescados, carnes, arroces, postres y desayunos. Información de alérgenos incluida."
 >
   <Fragment slot="head">
+    <link
+      rel="preload"
+      as="image"
+      href={heroPreloadSrc}
+      imagesizes="100vw"
+    />
     <script type="application/ld+json">{JSON.stringify(menuSchema)}</script>
   </Fragment>
   <section
@@ -320,13 +450,18 @@ const menuSchema = {
     class="relative flex items-center justify-center text-center"
     style="height: 320px;"
   >
-    <img
-      src="/assets/restaurante-interior-clientes-patio.jpg"
+    <Image
+      src={heroImage}
+      widths={[480, 768, 1024, 1280, 1600]}
+      sizes="100vw"
+      width={1600}
+      height={900}
+      format="webp"
+      quality={70}
       alt="Clientes en el patio interior del restaurante"
-      width="1600"
-      height="900"
       loading="eager"
       fetchpriority="high"
+      decoding="async"
       class="absolute inset-0 h-full w-full object-cover"
     />
     <div class="absolute inset-0" style="background: rgba(28, 20, 16, 0.55);"></div>
@@ -403,14 +538,28 @@ const menuSchema = {
                   <div class="menu-item">
                     <div class="menu-item-main">
                       {asset ? (
-                        <img
-                          src={asset.src}
-                          alt={asset.alt}
-                          width="56"
-                          height="56"
-                          loading="lazy"
-                          decoding="async"
-                        />
+                        asset.optimized ? (
+                          <Image
+                            src={asset.src}
+                            alt={asset.alt}
+                            width={56}
+                            height={56}
+                            sizes="56px"
+                            format="webp"
+                            quality={60}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        ) : (
+                          <img
+                            src={asset.src}
+                            alt={asset.alt}
+                            width="56"
+                            height="56"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        )
                       ) : null}
                       <div class="menu-item-text">
                         <div class="menu-item-title">
@@ -474,14 +623,28 @@ const menuSchema = {
                   <div class="menu-item">
                     <div class="menu-item-main">
                       {asset ? (
-                        <img
-                          src={asset.src}
-                          alt={asset.alt}
-                          width="56"
-                          height="56"
-                          loading="lazy"
-                          decoding="async"
-                        />
+                        asset.optimized ? (
+                          <Image
+                            src={asset.src}
+                            alt={asset.alt}
+                            width={56}
+                            height={56}
+                            sizes="56px"
+                            format="webp"
+                            quality={60}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        ) : (
+                          <img
+                            src={asset.src}
+                            alt={asset.alt}
+                            width="56"
+                            height="56"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        )
                       ) : null}
                       <div class="menu-item-text">
                         <div class="menu-item-title">
@@ -672,6 +835,11 @@ const menuSchema = {
       font-size: 22px;
       margin: 0;
       color: var(--color-text-primary);
+    }
+
+    .menu-category {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 900px;
     }
 
     .category-header {
