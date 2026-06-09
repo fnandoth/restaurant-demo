@@ -1,0 +1,234 @@
+{
+  "menu": [
+    {
+      "categoria": "Gran Café Santander Breakfast (Choice of coffee or tea with accompaniment)",
+      "platos": [
+        {
+          "nombre": "Sourdough white bread toast with EVOO and fresh tomato",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Seed bread toast with EVOO and fresh tomato",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Butter croissant",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Sobaos pasiegos from Vega del Pas",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Corbatas from Unquera",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Homemade muffins from Unquera",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Donuts",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Complement your breakfast",
+      "platos": [
+        {
+          "nombre": "Orange juice",
+          "precio": "3,00 €",
+          "alergenos": "",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Mixed fruit",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "Suitable for celiacs",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Breakfast and Snack Menu",
+      "platos": [
+        {
+          "nombre": "Butter croissant",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Sobaos pasiegos from Vega de Pas",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Corbatas from Unquera",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Homemade muffins from Unquera",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Donuts",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Butter bun",
+          "precio": "3,20 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Homemade carrot cake",
+          "precio": "4,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Homemade yogurt and lemon cake",
+          "precio": "4,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Natural yogurt with muesli",
+          "precio": "4,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Suitable for celiacs upon modification request",
+          "imagen": ""
+        },
+        {
+          "nombre": "Puff pastry braid",
+          "precio": "4,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Pasiega Quesada \"El Macho\"",
+          "precio": "4,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Spanish omelette pincho",
+          "precio": "4,80 €",
+          "alergenos": "",
+          "apto_celiacos": "Suitable for celiacs upon modification request",
+          "imagen": ""
+        },
+        {
+          "nombre": "Tuna Spanish omelette pincho",
+          "precio": "5,00 €",
+          "alergenos": "",
+          "apto_celiacos": "Suitable for celiacs upon modification request",
+          "imagen": ""
+        },
+        {
+          "nombre": "Ham and cheese sandwich",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        }
+      ]
+    },
+    {
+      "categoria": "Sandwiches and toasts",
+      "platos": [
+        {
+          "nombre": "Turkey sandwich",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Bagel with smoked salmon and cream cheese",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Iberian ham toast",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Avocado and tomato toast",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "Vegetable croissant",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "California sandwich",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        },
+        {
+          "nombre": "\"La Madrid\" sandwich",
+          "precio": "5,50 €",
+          "alergenos": "",
+          "apto_celiacos": "Not suitable for celiacs",
+          "imagen": ""
+        }
+      ]
+    }
+  ]
+}

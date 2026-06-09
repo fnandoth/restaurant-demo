@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import CookieConsent from '../components/CookieConsent.astro';
+import { T } from '../i18n/runtime.ts';
 
 interface Props {
   title: string;
@@ -90,7 +91,7 @@ const jsonLd = {
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
       />
     </noscript>
-
+    <script src="../i18n/global.js"></script>
     <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     <slot name="head" />
   </head>
