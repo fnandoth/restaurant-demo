@@ -22,13 +22,6 @@ const heroOptimized = await getImage({
 });
 const heroPreloadSrc = heroOptimized.src;
 
-const menuImageModules = import.meta.glob('../assets/menu/*.jpg', { eager: true });
-const menuImages = Object.fromEntries(
-  Object.entries(menuImageModules).flatMap(([path, module]) => {
-    const fileName = path.split('/').pop();
-    return fileName ? [[fileName, module.default]] : [];
-  })
-);
 
 const slugify = (value: string) =>
   `cat-${value
@@ -114,12 +107,22 @@ const imageMap = [
   { match: 'Desayuno', file: 'restaurante-desayuno-frio.jpg', alt: 'Desayuno en Gran Café Santander Madrid' }
 ];
 
+const menuImages = Object.fromEntries(
+  imageMap.map((item) => [
+    item.file,
+    `/assets/menu/${item.file}`
+  ])
+);
+
 const getDishAsset = (name: string) => {
-  const entry = imageMap.find((item) => name.toLowerCase().includes(item.match.toLowerCase()));
+  const entry = imageMap.find((item) =>
+    name.toLowerCase().includes(item.match.toLowerCase())
+  );
   if (!entry) return null;
-  const src = menuImages[entry.file];
-  if (src) return { src, alt: entry.alt, optimized: true };
-  return { src: `/assets/${entry.file}`, alt: entry.alt, optimized: false };
+  return {
+    src: menuImages[entry.file],
+    alt: entry.alt
+  };
 };
 
 const getCeliacBadge = (statusEs: string, statusEn?: string) => {
@@ -261,11 +264,8 @@ const menuSchema = {
                     <div class="menu-item">
                       <div class="menu-item-main">
                         {asset ? (
-                          asset.optimized ? (
-                            <Image src={asset.src} alt={asset.alt} width={56} height={56} sizes="56px" format="webp" quality={60} loading="lazy" decoding="async" />
-                          ) : (
                             <img src={asset.src} alt={asset.alt} width="56" height="56" loading="lazy" decoding="async" />
-                          )
+                          
                         ) : null}
                         <div class="menu-item-text">
                           <div class="menu-item-title">
@@ -337,12 +337,9 @@ const menuSchema = {
                   return (
                     <div class="menu-item">
                       <div class="menu-item-main">
-                        {asset ? (
-                          asset.optimized ? (
-                            <Image src={asset.src} alt={asset.alt} width={56} height={56} sizes="56px" format="webp" quality={60} loading="lazy" decoding="async" />
-                          ) : (
+                        {asset ? ( 
                             <img src={asset.src} alt={asset.alt} width="56" height="56" loading="lazy" decoding="async" />
-                          )
+                          
                         ) : null}
                         <div class="menu-item-text">
                           <div class="menu-item-title">
