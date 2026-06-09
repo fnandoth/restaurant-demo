@@ -5,7 +5,6 @@ import menuEs from '../data/menu.es.json';
 import menuEn from '../data/menu.en.json';
 import desayunoEs from '../data/desayuno.es.json';
 import desayunoEn from '../data/desayuno.en.json';
-import heroImage from  '/assets/hero/restaurante-interior-clientes-patio.jpg';
 import "../styles/carta.css";
 
 const menuCategoriesEs = menuEs.menu;
@@ -13,8 +12,13 @@ const menuCategoriesEn = menuEn.menu;
 const desayunoCategoriesEs = desayunoEs.menu;
 const desayunoCategoriesEn = desayunoEn.menu;
 
-const heroOptimized = await getImage({
+
+const heroImage = '/assets/hero/restaurante-interior-clientes-patio.jpg';
+
+const heroOptimized = ({
   src: heroImage,
+  width: 960,
+  height: 1200,
   widths: [480, 768, 1024, 1280, 1600],
   format: 'webp',
   quality: 70,
