@@ -19,16 +19,20 @@ import "../styles/trabaja-con-nosotros.css";
     />
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Trabaja con nosotros</h1>
-      <p>Queremos conocerte. Envíanos tu candidatura y tu CV.</p>
+      <h1 data-i18n="trabaja.heroTitle">Trabaja con nosotros</h1>
+      <p data-i18n="trabaja.heroSubtitle">
+        Queremos conocerte. Envíanos tu candidatura y tu CV.
+      </p>
     </div>
   </section>
 
   <section class="careers-section">
     <div class="careers-container">
       <div class="careers-intro">
-        <h2>Únete al equipo del Gran Café Santander</h2>
-        <p>
+        <h2 data-i18n="trabaja.sectionTitle">
+          Únete al equipo del Gran Café Santander
+        </h2>
+        <p data-i18n="trabaja.sectionDesc">
           Buscamos personas apasionadas por la hostelería y el servicio.
           Completa el formulario y cuéntanos tu experiencia.
         </p>
@@ -42,7 +46,7 @@ import "../styles/trabaja-con-nosotros.css";
       >
         <div class="form-grid">
           <div class="form-field">
-            <label for="nombre">Nombre</label>
+            <label for="nombre" data-i18n="trabaja.labelName">Nombre</label>
             <input
               id="nombre"
               name="nombre"
@@ -55,7 +59,9 @@ import "../styles/trabaja-con-nosotros.css";
           </div>
 
           <div class="form-field">
-            <label for="apellido">Apellido</label>
+            <label for="apellido" data-i18n="trabaja.labelSurname"
+              >Apellido</label
+            >
             <input
               id="apellido"
               name="apellido"
@@ -69,7 +75,7 @@ import "../styles/trabaja-con-nosotros.css";
           </div>
 
           <div class="form-field">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="trabaja.labelEmail">Email</label>
             <input
               id="email"
               name="email"
@@ -82,7 +88,8 @@ import "../styles/trabaja-con-nosotros.css";
           </div>
 
           <div class="form-field">
-            <label for="telefono">Teléfono</label>
+            <label for="telefono" data-i18n="trabaja.labelPhone">Teléfono</label
+            >
             <input
               id="telefono"
               name="telefono"
@@ -98,7 +105,9 @@ import "../styles/trabaja-con-nosotros.css";
           </div>
 
           <div class="form-field full">
-            <label for="mensaje">Mensaje / Presentación</label>
+            <label for="mensaje" data-i18n="trabaja.labelMessage"
+              >Mensaje / Presentación</label
+            >
             <textarea
               id="mensaje"
               name="mensaje"
@@ -110,7 +119,8 @@ import "../styles/trabaja-con-nosotros.css";
           </div>
 
           <div class="form-field full">
-            <label for="cv">Adjuntar CV (PDF)</label>
+            <label for="cv" data-i18n="trabaja.labelCV">Adjuntar CV (PDF)</label
+            >
             <div class="file-input">
               <input
                 id="cv"
@@ -124,6 +134,7 @@ import "../styles/trabaja-con-nosotros.css";
                 id="cv-file-name"
                 class="file-name"
                 data-default="Ningún archivo seleccionado"
+                data-i18n="trabaja.noFile"
               >
                 Ningún archivo seleccionado
               </span>
@@ -141,166 +152,164 @@ import "../styles/trabaja-con-nosotros.css";
                 aria-describedby="privacy-error"
               />
               <span>
-                He leído y acepto la
+                <span data-i18n="trabaja.privacy">He leído y acepto la</span>
                 <a
-                  href="/politica-de-privacidad/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Política de Privacidad
-                </a>
+                href="/politica-de-privacidad/" target="_blank" rel="noopener
+                noreferrer" data-i18n="trabaja.privacyLink" > Política de
+                Privacidad </a>
               </span>
             </label>
-            <p class="form-error" id="privacy-error" data-error-for="privacy">
-            </p>
           </div>
+          <p class="form-error" id="privacy-error" data-error-for="privacy"></p>
         </div>
-
-        <div class="form-actions">
-          <button class="submit-button" type="submit">Enviar</button>
-        </div>
-
-        <p
-          class="form-success"
-          id="form-success"
-          role="status"
-          aria-live="polite"
-        >
-        </p>
       </form>
+
+      <div class="form-actions">
+        <button class="submit-button" type="submit" data-i18n="trabaja.submit"
+          >Enviar</button
+        >
+      </div>
+
+      <p
+        class="form-success"
+        id="form-success"
+        role="status"
+        aria-live="polite"
+      >
+      </p>
     </div>
   </section>
+</BaseLayout>
 
-  <script>
-    const form = document.getElementById("careers-form");
+<script>
+  const form = document.getElementById("careers-form");
 
-    if (form) {
-      const successMessage = document.getElementById("form-success");
-      const fileInput = form.querySelector("#cv");
-      const fileName = document.getElementById("cv-file-name");
-      const defaultFileName =
-        fileName?.dataset.default || "Ningún archivo seleccionado";
+  if (form) {
+    const successMessage = document.getElementById("form-success");
+    const fileInput = form.querySelector("#cv");
+    const fileName = document.getElementById("cv-file-name");
+    const defaultFileName =
+      fileName?.dataset.default || "Ningún archivo seleccionado";
 
-      const validators = {
-        nombre: (input: { value: string }) =>
-          input.value.trim() ? "" : "El nombre es obligatorio.",
-        apellido: (input: { value: string }) =>
-          input.value.trim() ? "" : "El apellido es obligatorio.",
-        email: (input: { value: string }) => {
-          const value = input.value.trim();
-          if (!value) return "El email es obligatorio.";
-          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
-            ? ""
-            : "Introduce un email válido.";
-        },
-        telefono: (input: { value: string }) => {
-          const value = input.value.trim();
-          if (!value) return "El teléfono es obligatorio.";
-          const digits = value.replace(/\D/g, "");
-          return digits.length >= 9
-            ? ""
-            : "Introduce un teléfono válido (mínimo 9 dígitos).";
-        },
-        mensaje: (input: { value: string }) =>
-          input.value.trim() ? "" : "El mensaje es obligatorio.",
-        cv: (input: { files: any[] }) => {
-          const file = input.files && input.files[0];
-          if (!file) return "Adjunta tu CV en PDF.";
-          const isPdf =
-            file.type === "application/pdf" ||
-            file.name.toLowerCase().endsWith(".pdf");
-          return isPdf ? "" : "Solo se permiten archivos PDF.";
-        },
-        privacy: (input: { checked: any }) =>
-          input.checked ? "" : "Debes aceptar la política de privacidad.",
-      };
+    const validators = {
+      nombre: (input: { value: string }) =>
+        input.value.trim() ? "" : "El nombre es obligatorio.",
+      apellido: (input: { value: string }) =>
+        input.value.trim() ? "" : "El apellido es obligatorio.",
+      email: (input: { value: string }) => {
+        const value = input.value.trim();
+        if (!value) return "El email es obligatorio.";
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+          ? ""
+          : "Introduce un email válido.";
+      },
+      telefono: (input: { value: string }) => {
+        const value = input.value.trim();
+        if (!value) return "El teléfono es obligatorio.";
+        const digits = value.replace(/\D/g, "");
+        return digits.length >= 9
+          ? ""
+          : "Introduce un teléfono válido (mínimo 9 dígitos).";
+      },
+      mensaje: (input: { value: string }) =>
+        input.value.trim() ? "" : "El mensaje es obligatorio.",
+      cv: (input: { files: any[] }) => {
+        const file = input.files && input.files[0];
+        if (!file) return "Adjunta tu CV en PDF.";
+        const isPdf =
+          file.type === "application/pdf" ||
+          file.name.toLowerCase().endsWith(".pdf");
+        return isPdf ? "" : "Solo se permiten archivos PDF.";
+      },
+      privacy: (input: { checked: any }) =>
+        input.checked ? "" : "Debes aceptar la política de privacidad.",
+    };
 
-      const setError = (input: Element, message: string | null) => {
-        const error = form.querySelector(`[data-error-for="${input.id}"]`);
-        if (!error) return;
-        if (message) {
-          input.classList.add("field-error");
-          input.setAttribute("aria-invalid", "true");
-          error.textContent = message;
-        } else {
-          input.classList.remove("field-error");
-          input.setAttribute("aria-invalid", "false");
-          error.textContent = "";
-        }
-      };
+    const setError = (input: Element, message: string | null) => {
+      const error = form.querySelector(`[data-error-for="${input.id}"]`);
+      if (!error) return;
+      if (message) {
+        input.classList.add("field-error");
+        input.setAttribute("aria-invalid", "true");
+        error.textContent = message;
+      } else {
+        input.classList.remove("field-error");
+        input.setAttribute("aria-invalid", "false");
+        error.textContent = "";
+      }
+    };
 
-      const validateField = (input: Element) => {
-        const validator = validators[input.id];
-        if (!validator) return true;
-        const message = validator(input);
-        setError(input, message);
-        return !message;
-      };
+    const validateField = (input: Element) => {
+      const validator = validators[input.id];
+      if (!validator) return true;
+      const message = validator(input);
+      setError(input, message);
+      return !message;
+    };
 
-      const validateAll = () => {
-        let isValid = true;
-        Object.keys(validators).forEach((id) => {
-          const input = form.querySelector(`#${id}`);
-          if (!input) return;
-          if (!validateField(input)) isValid = false;
-        });
-        return isValid;
-      };
-
-      const updateFileName = () => {
-        if (!fileName) return;
-        const file = fileInput && fileInput.files && fileInput.files[0];
-        fileName.textContent = file ? file.name : defaultFileName;
-      };
-
-      const clearAllErrors = () => {
-        Object.keys(validators).forEach((id) => {
-          const input = form.querySelector(`#${id}`);
-          if (!input) return;
-          setError(input, "");
-        });
-      };
-
-      ["nombre", "apellido", "email", "telefono", "mensaje"].forEach((id) => {
+    const validateAll = () => {
+      let isValid = true;
+      Object.keys(validators).forEach((id) => {
         const input = form.querySelector(`#${id}`);
         if (!input) return;
-        input.addEventListener("input", () => validateField(input));
-        input.addEventListener("blur", () => validateField(input));
+        if (!validateField(input)) isValid = false;
       });
+      return isValid;
+    };
 
-      const privacyInput = form.querySelector("#privacy");
-      if (privacyInput) {
-        privacyInput.addEventListener("change", () =>
-          validateField(privacyInput),
-        );
-      }
+    const updateFileName = () => {
+      if (!fileName) return;
+      const file = fileInput && fileInput.files && fileInput.files[0];
+      fileName.textContent = file ? file.name : defaultFileName;
+    };
 
-      if (fileInput) {
-        fileInput.addEventListener("change", () => {
-          updateFileName();
-          validateField(fileInput);
-        });
-      }
-
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-        if (successMessage) successMessage.textContent = "";
-
-        if (!validateAll()) return;
-
-        // TODO: Se necesita configuarar segun los detalles del backend o servicio de terceros que se vaya a utilizar para procesar las solicitudes de empleo.
-
-        if (successMessage) {
-          successMessage.textContent =
-            "¡Gracias por tu interés! Hemos recibido tu solicitud y nos pondremos en contacto contigo pronto.";
-        }
-
-        form.reset();
-        updateFileName();
-        clearAllErrors();
+    const clearAllErrors = () => {
+      Object.keys(validators).forEach((id) => {
+        const input = form.querySelector(`#${id}`);
+        if (!input) return;
+        setError(input, "");
       });
+    };
 
-      updateFileName();
+    ["nombre", "apellido", "email", "telefono", "mensaje"].forEach((id) => {
+      const input = form.querySelector(`#${id}`);
+      if (!input) return;
+      input.addEventListener("input", () => validateField(input));
+      input.addEventListener("blur", () => validateField(input));
+    });
+
+    const privacyInput = form.querySelector("#privacy");
+    if (privacyInput) {
+      privacyInput.addEventListener("change", () =>
+        validateField(privacyInput),
+      );
     }
-  </script>
-</BaseLayout>
+
+    if (fileInput) {
+      fileInput.addEventListener("change", () => {
+        updateFileName();
+        validateField(fileInput);
+      });
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (successMessage) successMessage.textContent = "";
+
+      if (!validateAll()) return;
+
+      // TODO: Se necesita configuarar segun los detalles del backend o servicio de terceros que se vaya a utilizar para procesar las solicitudes de empleo.
+
+      if (successMessage) {
+        successMessage.textContent =
+          "¡Gracias por tu interés! Hemos recibido tu solicitud y nos pondremos en contacto contigo pronto.";
+      }
+
+      form.reset();
+      updateFileName();
+      clearAllErrors();
+    });
+
+    updateFileName();
+  }
+</script>
