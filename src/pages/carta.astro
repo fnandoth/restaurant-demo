@@ -7,8 +7,7 @@ import desayunoEs from '../data/desayuno.es.json';
 import desayunoEn from '../data/desayuno.en.json';
 import heroImage from '../assets/hero/restaurante-interior-clientes-patio.jpg';
 import "../styles/carta.css";
-// Eliminamos la lectura de cookies del servidor, ya que delegaremos el intercambio
-// de idioma al cliente mediante atributos de datos (data-es, data-en)
+
 const menuCategoriesEs = menuEs.menu;
 const menuCategoriesEn = menuEn.menu;
 const desayunoCategoriesEs = desayunoEs.menu;
@@ -398,7 +397,6 @@ const menuSchema = {
       }
     });
 
-    // --- LÓGICA EXISTENTE DE TABS Y SCROLL ---
     const tabs = document.querySelectorAll('.tab-button');
     const panels = document.querySelectorAll('.tab-panel');
     const setActiveTab = (targetId: string) => {

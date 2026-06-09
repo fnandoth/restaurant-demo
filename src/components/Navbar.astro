@@ -174,7 +174,6 @@ import '../styles/navbar.css';
     document.documentElement.lang = lang;
     window.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
     document.cookie = `lang=${lang}; path=/; max-age=31536000`;
-    window.location.reload();
   }
 
   function applyNavTranslations(lang: 'es' | 'en') {
